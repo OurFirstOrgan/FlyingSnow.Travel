@@ -1,0 +1,32 @@
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.csprojResolveAssemblyReference.cache
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.dll
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.pdb
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.dll
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\log4net.dll
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.pdb
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.dll
+c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.pdb
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.dll
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.pdb
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.dll
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.pdb
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.csprojResolveAssemblyReference.cache
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.dll
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.pdb
+D:\SourceCode\FlyingSnow.Web\FlyingSnow.Log\bin\Debug\log4net.dll
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.dll
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.pdb
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.dll
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\bin\Debug\log4net.dll
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.pdb
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.csprojResolveAssemblyReference.cache
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.dll
+C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.pdb
+D:\GitHub\FlyingSnow\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.dll
+D:\GitHub\FlyingSnow\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.pdb
+D:\GitHub\FlyingSnow\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.dll
+D:\GitHub\FlyingSnow\FlyingSnow.Log\bin\Debug\log4net.dll
+D:\GitHub\FlyingSnow\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.pdb
+D:\GitHub\FlyingSnow\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.csprojResolveAssemblyReference.cache
+D:\GitHub\FlyingSnow\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.dll
+D:\GitHub\FlyingSnow\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.pdb
