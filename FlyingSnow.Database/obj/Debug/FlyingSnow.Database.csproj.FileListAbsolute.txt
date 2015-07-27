@@ -44,3 +44,15 @@ D:\GitHub\FlyingSnow\FlyingSnow.Database\bin\Debug\EntityFramework.SqlServer.xml
 D:\GitHub\FlyingSnow\FlyingSnow.Database\obj\Debug\FlyingSnow.Database.csprojResolveAssemblyReference.cache
 D:\GitHub\FlyingSnow\FlyingSnow.Database\obj\Debug\FlyingSnow.Database.dll
 D:\GitHub\FlyingSnow\FlyingSnow.Database\obj\Debug\FlyingSnow.Database.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\FlyingSnow.Database.dll.config
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\FlyingSnow.Database.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\FlyingSnow.Database.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\EntityFramework.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\FlyingSnow.Entries.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\FlyingSnow.Entries.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\EntityFramework.xml
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\obj\Debug\FlyingSnow.Database.csprojResolveAssemblyReference.cache
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\obj\Debug\FlyingSnow.Database.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Database\obj\Debug\FlyingSnow.Database.pdb

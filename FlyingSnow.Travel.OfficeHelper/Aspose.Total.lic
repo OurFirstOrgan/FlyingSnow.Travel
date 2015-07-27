@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<License>
+  <Data>
+    <LicensedTo>AvePoint</LicensedTo>
+    <LicenseType>Developer OEM</LicenseType>
+    <LicenseNote>Limited to 1 developer.</LicenseNote>
+    <OrderID>140212095144</OrderID>
+    <OEM>This is a redistributable license</OEM>
+    <Products>
+      <Product>Aspose.Total for .NET</Product>
+    </Products>
+    <EditionType>Enterprise</EditionType>
+    <SerialNumber>e5c928f0-83a1-4722-9cad-ef9258a92ae4</SerialNumber>
+    <SubscriptionExpiry>20150221</SubscriptionExpiry>
+    <LicenseVersion>2.2</LicenseVersion>
+  </Data>
+  <Signature>iLerBZcX5NF+DQ6VY3X98dIQtMjJdSSKsDi5j72Fjs1KjVfo5XFp2VQL0BCcwJtcSGZEI+09Qg6umDiYXUgWLD+pN2+08bY2jX4/+x7uQtKZDN0jwMVtMBY43akjNO4LQ9qxv8F9tgwfaJTMxUnlsMF35KBOMAEtO4KiWWat3ns=</Signature>
+</License>

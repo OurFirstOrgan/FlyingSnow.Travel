@@ -28,3 +28,11 @@ D:\GitHub\FlyingSnow\FlyingSnow.Entries\bin\Debug\Newtonsoft.Json.dll
 D:\GitHub\FlyingSnow\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.csprojResolveAssemblyReference.cache
 D:\GitHub\FlyingSnow\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.dll
 D:\GitHub\FlyingSnow\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\bin\Debug\FlyingSnow.Entries.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\bin\Debug\FlyingSnow.Entries.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\bin\Debug\EntityFramework.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.csprojResolveAssemblyReference.cache
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.pdb

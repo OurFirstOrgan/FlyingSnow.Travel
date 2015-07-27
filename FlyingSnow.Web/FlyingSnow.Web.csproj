@@ -454,6 +454,10 @@
       <Project>{33020560-21b3-4258-a14e-4eca25d12405}</Project>
       <Name>FlyingSnow.Log</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FlyingSnow.Travel.OfficeHelper\FlyingSnow.Travel.OfficeHelper.csproj">
+      <Project>{c4703a38-4f0d-4378-9b75-aca4bb37fc3d}</Project>
+      <Name>FlyingSnow.Travel.OfficeHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FlyingSnow.Utility\FlyingSnow.Utility.csproj">
       <Project>{d5c333a8-726f-4f9d-a164-a0ac1e1bb1d7}</Project>
       <Name>FlyingSnow.Utility</Name>

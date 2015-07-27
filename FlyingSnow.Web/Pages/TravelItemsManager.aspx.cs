@@ -1,4 +1,6 @@
 ﻿using FlyingSnow.Controls;
+using FlyingSnow.Entries;
+using FlyingSnow.Travel.OfficeHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +33,22 @@ namespace FlyingSnow.Web.Pages
             {
                 a_control = new TravelControl();
             }
+        }
+
+        protected void TravelItemsDataGrid_ItemCommand(object source, DataGridCommandEventArgs e)
+        {
+            GetTravelControl();
+            TravelItem item = a_control.GetTravelItemByItemGuid(new Guid(e.Item.Cells[1].ToString()));
+            if (e.CommandName.Equals("Export"))
+            {
+                ExportWord();
+            }
+        }
+
+        public void ExportWord()
+        {
+            //TravelWord travelWord = new TravelWord();
+            //TravelWord.ConfrimBase();
         }
     }
 }

@@ -8,7 +8,8 @@
     <br />
     <br />
     <asp:DataGrid runat="server" ID="TravelItemsDataGrid" AutoGenerateColumns="False"
-        class="table table-striped" AllowPaging="True" AllowSorting="True">
+        class="table table-striped" AllowPaging="True" AllowSorting="True"
+        OnItemCommand="TravelItemsDataGrid_ItemCommand">
         <Columns>
             <asp:BoundColumn DataField="ItemGuid" Visible="False"></asp:BoundColumn>
             <asp:BoundColumn DataField="TravelDate" HeaderText="日期" DataFormatString="{0:yyyy-MM-dd}"></asp:BoundColumn>
