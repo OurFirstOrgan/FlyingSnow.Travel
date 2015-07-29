@@ -50,6 +50,7 @@ D:\GitHub\FlyingSnow\FlyingSnow.Controls\bin\Debug\FlyingSnow.Configuration.pdb
 D:\GitHub\FlyingSnow\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.csprojResolveAssemblyReference.cache
 D:\GitHub\FlyingSnow\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.dll
 D:\GitHub\FlyingSnow\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.pdb
+<<<<<<< HEAD
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Controls.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Controls.pdb
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\EntityFramework.dll
@@ -66,3 +67,21 @@ C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.csprojResolveAssemblyReference.cache
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.pdb
+=======
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Controls.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Controls.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\EntityFramework.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Database.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Entries.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Log.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Configuration.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\log4net.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Database.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Entries.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Log.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\bin\Debug\FlyingSnow.Configuration.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.csprojResolveAssemblyReference.cache
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\obj\Debug\FlyingSnow.Controls.pdb
+>>>>>>> origin/master

@@ -30,6 +30,7 @@ D:\GitHub\FlyingSnow\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.pdb
 D:\GitHub\FlyingSnow\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.csprojResolveAssemblyReference.cache
 D:\GitHub\FlyingSnow\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.dll
 D:\GitHub\FlyingSnow\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.pdb
+<<<<<<< HEAD
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.pdb
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.dll
@@ -38,3 +39,13 @@ C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\Flyi
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.csprojResolveAssemblyReference.cache
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.pdb
+=======
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Log.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\log4net.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\bin\Debug\FlyingSnow.Configuration.pdb
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.csprojResolveAssemblyReference.cache
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.dll
+D:\GitHub\FlyingSnow.Travel\FlyingSnow.Log\obj\Debug\FlyingSnow.Log.pdb
+>>>>>>> origin/master

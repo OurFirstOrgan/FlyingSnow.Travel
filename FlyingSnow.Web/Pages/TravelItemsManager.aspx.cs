@@ -1,4 +1,6 @@
 ﻿using FlyingSnow.Controls;
+using FlyingSnow.Entries;
+using FlyingSnow.Travel.OfficeHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,7 +32,6 @@ namespace FlyingSnow.Web.Pages
                 a_control = new TravelControl();
             }
         }
-
         protected void TravelItemsDataGrid_DeleteCommand(object source, DataGridCommandEventArgs e)
         {
             GetTravelControl();
@@ -47,13 +48,20 @@ namespace FlyingSnow.Web.Pages
         protected void TravelItemsDataGrid_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
-
-        protected void AgenciesDataGrid_ItemCommand(object source, DataGridCommandEventArgs e)
+        protected void TravelItemsDataGrid_ItemCommand(object source, DataGridCommandEventArgs e)
         {
+            GetTravelControl();
+            TravelItem item = a_control.GetTravelItemByItemGuid(new Guid(e.Item.Cells[1].ToString()));
             if (e.CommandName.Equals("Export"))
             {
-                //导出
+                ExportWord();
             }
+        }
+
+        public void ExportWord()
+        {
+            //TravelWord travelWord = new TravelWord();
+            //TravelWord.ConfrimBase();
         }
     }
 }

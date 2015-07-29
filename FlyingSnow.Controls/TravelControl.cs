@@ -28,6 +28,22 @@ namespace FlyingSnow.Controls
             return results;
         }
 
+        public TravelItem GetTravelItemByItemGuid(Guid guid)
+        {
+            TravelItem result = null;
+            try
+            {
+                using (var db = new EntryContext())
+                {
+                    result = db.TravelItems.Where(i => i.ItemGuid == guid).FirstOrDefault();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logs.Error("GetTravelItemByItemGuid Exception : " + ex.ToString());
+            }
+            return result;
+        }
         public List<object> GetBindingData()
         {
             List<object> result = null;
