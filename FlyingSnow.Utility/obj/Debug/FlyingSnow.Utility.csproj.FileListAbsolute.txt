@@ -16,3 +16,7 @@ D:\GitHub\FlyingSnow\FlyingSnow.Utility\bin\Debug\FlyingSnow.Utility.pdb
 D:\GitHub\FlyingSnow\FlyingSnow.Utility\obj\Debug\FlyingSnow.Utility.csprojResolveAssemblyReference.cache
 D:\GitHub\FlyingSnow\FlyingSnow.Utility\obj\Debug\FlyingSnow.Utility.dll
 D:\GitHub\FlyingSnow\FlyingSnow.Utility\obj\Debug\FlyingSnow.Utility.pdb
+C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Utility\bin\Debug\FlyingSnow.Utility.dll
+C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Utility\bin\Debug\FlyingSnow.Utility.pdb
+C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Utility\obj\Debug\FlyingSnow.Utility.dll
+C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Utility\obj\Debug\FlyingSnow.Utility.pdb

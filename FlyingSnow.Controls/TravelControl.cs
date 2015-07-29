@@ -57,7 +57,7 @@ namespace FlyingSnow.Controls
             }
             return result;
         }
-        public bool CreateTravelItem(Entries.TravelItem item)
+        public bool CreateTravelItem(TravelItem item)
         {
             bool success = true;
             try
@@ -76,6 +76,26 @@ namespace FlyingSnow.Controls
             return success;
         }
 
-
+        public bool DeleteTravelItem(Guid guid)
+        {
+            bool success = true;
+            try
+            {
+                using (var db = new EntryContext())
+                {
+                    var items = from i in db.TravelItems
+                                where i.ItemGuid == guid
+                                select i;
+                    db.TravelItems.Remove(items.FirstOrDefault());
+                    db.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                success = false;
+                Logs.Error("DeleteTravelItem Exception : " + ex.ToString());
+            }
+            return success;
+        }
     }
 }

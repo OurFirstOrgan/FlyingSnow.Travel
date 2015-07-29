@@ -1,0 +1,25 @@
+ERROR Wechat Log Wechat - 2015/07/29 17:04:19,185   DeleteTravelItem Exception : System.ArgumentNullException: 值不能为 null。
+参数名: entity
+   在 System.Data.Entity.Utilities.Check.NotNull[T](T value, String parameterName)
+   在 System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   在 FlyingSnow.Controls.TravelControl.DeleteTravelItem(Guid guid) 位置 c:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\TravelControl.cs:行号 89           
+ERROR Wechat Log Wechat - 2015/07/29 17:06:25,467   DeleteTravelItem Exception : System.ArgumentNullException: 值不能为 null。
+参数名: entity
+   在 System.Data.Entity.Utilities.Check.NotNull[T](T value, String parameterName)
+   在 System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   在 FlyingSnow.Controls.TravelControl.DeleteTravelItem(Guid guid) 位置 c:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\TravelControl.cs:行号 89           
+ERROR Wechat Log Wechat - 2015/07/29 17:06:41,437   DeleteTravelItem Exception : System.ArgumentNullException: 值不能为 null。
+参数名: entity
+   在 System.Data.Entity.Utilities.Check.NotNull[T](T value, String parameterName)
+   在 System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   在 FlyingSnow.Controls.TravelControl.DeleteTravelItem(Guid guid) 位置 c:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\TravelControl.cs:行号 89           
+ERROR Wechat Log Wechat - 2015/07/29 17:07:05,129   DeleteAgencyByGuid Exception : System.ArgumentNullException: 值不能为 null。
+参数名: entity
+   在 System.Data.Entity.Utilities.Check.NotNull[T](T value, String parameterName)
+   在 System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   在 FlyingSnow.Controls.AgencyControl.DeleteAgencyByGuid(Guid guid) 位置 c:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\AgencyControl.cs:行号 137           
+ERROR Wechat Log Wechat - 2015/07/29 17:07:08,894   DeleteAgencyByGuid Exception : System.ArgumentNullException: 值不能为 null。
+参数名: entity
+   在 System.Data.Entity.Utilities.Check.NotNull[T](T value, String parameterName)
+   在 System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   在 FlyingSnow.Controls.AgencyControl.DeleteAgencyByGuid(Guid guid) 位置 c:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Controls\AgencyControl.cs:行号 137           

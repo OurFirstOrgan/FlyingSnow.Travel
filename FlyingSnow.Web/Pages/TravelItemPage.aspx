@@ -9,6 +9,14 @@
     </div>
     <hr />
     <div class="form-group">
+        <asp:Label runat="server" CssClass="col-md-2 control-label">旅行社代码</asp:Label>
+        <asp:TextBox ID="AgencyCode" runat="server" CssClass="col-md-4 form-control"></asp:TextBox>
+        <asp:Label runat="server" CssClass="col-md-2 control-label">旅行社名称</asp:Label>
+        <asp:TextBox ID="AgencyName" runat="server" CssClass="form-control"></asp:TextBox>
+        <asp:Button runat="server" CssClass="btn btn-default" OnClick="SearchAgency_Click" Text="搜索" />
+    </div>
+    <hr />
+    <div class="form-group">
         <asp:Label runat="server" CssClass="col-md-2 control-label">姓名</asp:Label>
         <asp:TextBox ID="ContactName" runat="server" CssClass="form-control"></asp:TextBox>
     </div>

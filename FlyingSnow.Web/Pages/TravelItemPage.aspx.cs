@@ -12,6 +12,7 @@ namespace FlyingSnow.Web.Pages
     public partial class TravelItemPage : System.Web.UI.Page
     {
         TravelControl a_control;
+        AgencyControl a_agencyControl;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -50,12 +51,35 @@ namespace FlyingSnow.Web.Pages
         {
 
         }
+        protected void SearchAgency_Click(object sender, EventArgs e)
+        {
+            string agencyCode = this.AgencyCode.Text;
+            GetAgencyControl();
+            var items = a_agencyControl.GetAgenciesByFilter("code", agencyCode);
+            if (items.Count > 1 || items.Count == 0)
+            {
+                this.AgencyName.Text = "输入正确代码!";
+            }
+            else
+            {
+                this.AgencyName.Text = items.FirstOrDefault().AgencyName;
+            }
+
+        }
 
         private void GetControl()
         {
             if (a_control == null)
             {
                 a_control = new TravelControl();
+            }
+        }
+
+        private void GetAgencyControl()
+        {
+            if (a_agencyControl == null)
+            {
+                a_agencyControl = new AgencyControl();
             }
         }
     }

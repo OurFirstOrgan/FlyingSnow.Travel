@@ -22,6 +22,24 @@ namespace FlyingSnow.Web.Pages {
         protected global::System.Web.UI.WebControls.Calendar TravelDate;
         
         /// <summary>
+        /// AgencyCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AgencyCode;
+        
+        /// <summary>
+        /// AgencyName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AgencyName;
+        
+        /// <summary>
         /// ContactName control.
         /// </summary>
         /// <remarks>

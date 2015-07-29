@@ -42,7 +42,10 @@ namespace FlyingSnow.Controls
                     {
                         case "Code":
                         case "code":
-                            results.Add(db.TravelAgencies.FirstOrDefault(a => a.AgencyCode.Equals(value.ToString(), StringComparison.CurrentCultureIgnoreCase)));
+                            results = db.TravelAgencies.Where(a => a.AgencyCode.Equals(value.ToString(), StringComparison.CurrentCultureIgnoreCase)).ToList();
+                            break;
+                        case "name":
+                            results = db.TravelAgencies.Where(a => a.AgencyName.Contains(value.ToString())).ToList();
                             break;
                         default:
                             break;

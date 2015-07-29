@@ -1,14 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AgencyManager.aspx.cs" Inherits="FlyingSnow.Web.Pages.AgencyManager" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h4>添加旅行社</h4>
+    <h4>旅行社管理</h4>
     <hr />
-    <asp:TextBox runat="server" CssClass="col-md-2 col-md-offset-8 form-control" ID="SearchTextBox" OnTextChanged="SearchBox_TextChanged"></asp:TextBox>
+    <a runat="server" href="~/Pages/AgencyInfo.aspx">添加旅行社</a>
+    <br />
+    <asp:TextBox runat="server" CssClass="col-md-2 col-md-offset-8 form-control input-sm" ID="SearchTextBox" OnTextChanged="SearchBox_TextChanged"></asp:TextBox>
     <asp:Button runat="server" CssClass="btn btn-default" Text="搜索" OnClick="SearchButton_Click" />
     <br />
-    <br />
     <asp:DataGrid runat="server" ID="AgenciesDataGrid" AutoGenerateColumns="False"
-        class="table table-striped" AllowPaging="True" AllowSorting="True"
+        class="table table-bordered" AllowPaging="True" AllowSorting="True"
         OnItemCommand="AgenciesDataGrid_ItemCommand"
         OnDeleteCommand="AgenciesDataGrid_DeleteCommand">
         <Columns>

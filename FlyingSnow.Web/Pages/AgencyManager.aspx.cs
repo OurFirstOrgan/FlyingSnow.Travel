@@ -14,10 +14,7 @@ namespace FlyingSnow.Web.Pages
         AgencyControl a_control = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Page.IsPostBack)
-            {
-                BindData();
-            }
+            BindData();
         }
 
         public void BindData()
@@ -55,14 +52,16 @@ namespace FlyingSnow.Web.Pages
         protected void SearchButton_Click(object sender, EventArgs e)
         {
             string str = this.SearchTextBox.Text;
-
+            GetAgencyControl();
             if (RegExps.IsNumAndEnCh(str))
             {
-                
+                this.AgenciesDataGrid.DataSource = a_control.GetAgenciesByFilter("code", str);
+                this.AgenciesDataGrid.DataBind();
             }
             else
             {
-
+                this.AgenciesDataGrid.DataSource = a_control.GetAgenciesByFilter("name", str);
+                this.AgenciesDataGrid.DataBind();
             }
         }
 
