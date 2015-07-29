@@ -1,30 +1,4 @@
-c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.dll
-c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.pdb
-c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.dll
-c:\users\hzhang\documents\visual studio 2013\Projects\FlyingSnow.Web\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.pdb
-D:\SourceCode\FlyingSnow.Web\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.dll
-D:\SourceCode\FlyingSnow.Web\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.pdb
-D:\SourceCode\FlyingSnow.Web\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.dll
-D:\SourceCode\FlyingSnow.Web\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.pdb
-C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.dll
-C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.pdb
-C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.csprojResolveAssemblyReference.cache
-C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.dll
-C:\Users\hzhang\Documents\GitHub\FlyingSnow-Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.pdb
-D:\GitHub\FlyingSnow\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.dll
-D:\GitHub\FlyingSnow\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.pdb
-D:\GitHub\FlyingSnow\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.dll
-D:\GitHub\FlyingSnow\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.pdb
-D:\GitHub\FlyingSnow\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.pdb
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.pdb
-=======
-D:\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.dll
-D:\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.pdb
-D:\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.csprojResolveAssemblyReference.cache
-D:\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.dll
-D:\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.pdb
->>>>>>> origin/master

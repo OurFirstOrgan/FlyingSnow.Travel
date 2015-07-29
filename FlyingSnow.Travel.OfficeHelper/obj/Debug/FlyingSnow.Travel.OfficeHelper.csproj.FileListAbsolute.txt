@@ -8,5 +8,6 @@ C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Travel.OfficeHelpe
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Travel.OfficeHelper\bin\Debug\FlyingSnow.Entries.pdb
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Travel.OfficeHelper\bin\Debug\FlyingSnow.Log.pdb
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Travel.OfficeHelper\bin\Debug\FlyingSnow.Configuration.pdb
+C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Travel.OfficeHelper\obj\Debug\FlyingSnow.Travel.OfficeHelper.csprojResolveAssemblyReference.cache
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Travel.OfficeHelper\obj\Debug\FlyingSnow.Travel.OfficeHelper.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Travel.OfficeHelper\obj\Debug\FlyingSnow.Travel.OfficeHelper.pdb
