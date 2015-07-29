@@ -15,12 +15,48 @@ namespace FlyingSnow.Web.Pages
         AgencyControl a_agencyControl;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string guid = null;
+            if (!IsPostBack)
+            {
+                guid = Request.QueryString["Guid"];
+                if (!string.IsNullOrEmpty(guid))
+                {
+                    GetTravelControl();
+                    var item = a_control.GetTravelItemByItemGuid(new Guid(guid));
+                    BindData(item);
+                    //a_agency = item;
+                    //ChangeInputFieldState(false);
+                    //this.CreateButton.Visible = false;
+                    //this.EditButton.Visible = true;
+                }
+            }
         }
 
+        private void BindData(TravelItem item)
+        {
+            this.HideId.Text = item.Id.ToString();
+            this.HideGuid.Text = item.ItemGuid.ToString();
+            this.AgencyCode.Text = item.Agency == null ? string.Empty : item.Agency.AgencyCode;
+            this.AgencyName.Text = item.Agency == null ? string.Empty : item.Agency.AgencyName;
+            //this.AgencyPhone.Text = agency.AgencyPhones;
+            //this.AgencyFax.Text = agency.AgencyFax;
+            //this.AgencyPrincipal.Text = agency.AgencyPrincipal;
+            //this.AgencyPrincipalPhone.Text = agency.AgencyPrincipalPhone;
+            //this.AgencyAddress.Text = agency.AgencyAddress;
+        }
+        private void ChangeInputFieldState(bool flag)
+        {
+            //this.AgencyCode.Enabled = flag;
+            //this.AgencyName.Enabled = flag;
+            //this.AgencyPhone.Enabled = flag;
+            //this.AgencyFax.Enabled = flag;
+            //this.AgencyPrincipal.Enabled = flag;
+            //this.AgencyPrincipalPhone.Enabled = flag;
+            //this.AgencyAddress.Enabled = flag;
+        }
         protected void TypeIn_Click(object sender, EventArgs e)
         {
-            GetControl();
+            GetTravelControl();
             TravelItem item = new TravelItem();
             item.ItemGuid = Guid.NewGuid();
             item.TravelDate = this.TravelDate.SelectedDate;
@@ -66,15 +102,13 @@ namespace FlyingSnow.Web.Pages
             }
 
         }
-
-        private void GetControl()
+        private void GetTravelControl()
         {
             if (a_control == null)
             {
                 a_control = new TravelControl();
             }
         }
-
         private void GetAgencyControl()
         {
             if (a_agencyControl == null)

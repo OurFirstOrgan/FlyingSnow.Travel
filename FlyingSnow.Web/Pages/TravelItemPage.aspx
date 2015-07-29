@@ -75,4 +75,7 @@
             <asp:Button runat="server" ID="UpdateButton" OnClick="Update_Click" Text="更新" CssClass="btn btn-default" Visible="false" />
         </div>
     </div>
+
+    <asp:Label runat="server" ID="HideId" Visible="false"></asp:Label>
+    <asp:Label runat="server" ID="HideGuid" Visible="false"></asp:Label>
 </asp:Content>

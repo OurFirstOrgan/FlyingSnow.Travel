@@ -5,3 +5,4 @@ C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\bin\Debug\
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\bin\Debug\Newtonsoft.Json.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.dll
 C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.pdb
+C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Entries\obj\Debug\FlyingSnow.Entries.csprojResolveAssemblyReference.cache

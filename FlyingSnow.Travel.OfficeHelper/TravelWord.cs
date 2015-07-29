@@ -11,8 +11,10 @@ namespace FlyingSnow.Travel.OfficeHelper
 {
     public class TravelWord : WordHelper
     {
-        static string tempFolder = System.AppDomain.CurrentDomain.BaseDirectory + "Template";
+        static string tempFolder = System.AppDomain.CurrentDomain.BaseDirectory.Replace("FlyingSnow.Web", "FlyingSnow.Travel.OfficeHelper") + "Template";
         static string outputFolder = System.AppDomain.CurrentDomain.BaseDirectory + "Word";
+
+        public static readonly TravelWord instance = new TravelWord();
         public TravelWord()
             : base()
         {

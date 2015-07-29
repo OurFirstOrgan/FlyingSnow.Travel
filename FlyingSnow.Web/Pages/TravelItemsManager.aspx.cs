@@ -45,23 +45,31 @@ namespace FlyingSnow.Web.Pages
             }
         }
 
-        protected void TravelItemsDataGrid_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
         protected void TravelItemsDataGrid_ItemCommand(object source, DataGridCommandEventArgs e)
         {
             GetTravelControl();
-            TravelItem item = a_control.GetTravelItemByItemGuid(new Guid(e.Item.Cells[1].ToString()));
+            TravelItem item = a_control.GetTravelItemByItemGuid(new Guid(e.Item.Cells[0].Text.ToString()));
             if (e.CommandName.Equals("Export"))
             {
-                ExportWord();
+                ExportWord(item);
+            }
+            else if (e.CommandName.Equals("Select"))
+            {
+                Response.Redirect(string.Format("TravelItemPage?Guid={0}", e.Item.Cells[0].Text));
             }
         }
 
-        public void ExportWord()
+        public void ExportWord(TravelItem item)
         {
-            //TravelWord travelWord = new TravelWord();
-            //TravelWord.ConfrimBase();
+            string fileName = Guid.NewGuid().ToString() + ".doc";
+            string fileFolder = System.AppDomain.CurrentDomain.BaseDirectory + "Word";
+            TravelWord.ConfrimBase(item, fileName);
+            Context.Response.ContentType = "Application/msword";
+            string s = fileFolder + "\\" + fileName;
+            Response.WriteFile(s);
+            //Response.Write(s);
+            Response.Flush();
+            Response.Close();
         }
     }
 }

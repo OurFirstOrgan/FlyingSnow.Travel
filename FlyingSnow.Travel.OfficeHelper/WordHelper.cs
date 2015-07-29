@@ -18,7 +18,7 @@ namespace FlyingSnow.Travel.OfficeHelper
         {
             try
             {
-                const string licName = "Internal.lic";
+                const string licName = "Aspose.Total.lic";
                 var wlic = new Aspose.Words.License();
                 wlic.SetLicense(licName);
             }

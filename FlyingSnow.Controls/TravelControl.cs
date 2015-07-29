@@ -35,7 +35,12 @@ namespace FlyingSnow.Controls
             {
                 using (var db = new EntryContext())
                 {
-                    result = db.TravelItems.Where(i => i.ItemGuid == guid).FirstOrDefault();
+                    var query = from i in db.TravelItems.Include("Agency").Include("Peoples")
+                                //a in db.TravelAgencies on i.Agency equals a
+                                where i.ItemGuid == guid
+                                select i;
+                    result = query.FirstOrDefault();
+                    //result = db.TravelItems.Where(i => i.ItemGuid == guid).FirstOrDefault();
                 }
             }
             catch (Exception ex)

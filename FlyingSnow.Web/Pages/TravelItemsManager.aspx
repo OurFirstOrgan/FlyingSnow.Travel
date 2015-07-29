@@ -10,7 +10,6 @@
     <br />
     <asp:DataGrid runat="server" ID="TravelItemsDataGrid" AutoGenerateColumns="False"
         class="table table-striped" AllowPaging="True" AllowSorting="True"
-        OnSelectedIndexChanged="TravelItemsDataGrid_SelectedIndexChanged"
         OnDeleteCommand="TravelItemsDataGrid_DeleteCommand"
         OnItemCommand="TravelItemsDataGrid_ItemCommand">
         <Columns>
