@@ -32,20 +32,12 @@ namespace FlyingSnow.Web.Logic
                 UserName = "administrator",
             };
             IdUserResult = userMgr.Create(appUser, "1qaz2wsxE");
-
-            if (!userMgr.IsInRole(userMgr.FindByName("administrator").Id, "administrator"))
+            var user = userMgr.FindByName("administrator");
+            if (!userMgr.IsInRole(user.Id, "administrator"))
             {
+                //userMgr.RemoveFromRoles(user.Id, "read", "edit");
                 IdUserResult = userMgr.AddToRole(userMgr.FindByName("administrator").Id, "administrator");
             }
-        }
-
-        internal bool RemoveUser(string username)
-        {
-            Models.ApplicationDbContext context = new Models.ApplicationDbContext();
-            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-
-            userMgr.Delete(userMgr.FindByName(username));
-            return true;
         }
 
         internal List<ApplicationUser> GetAllUsers()
@@ -53,6 +45,55 @@ namespace FlyingSnow.Web.Logic
             Models.ApplicationDbContext context = new Models.ApplicationDbContext();
             var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
             return userMgr.Users.ToList();
+        }
+
+        internal List<object> GetBindingDate()
+        {
+            Models.ApplicationDbContext context = new Models.ApplicationDbContext();
+            var query = from u in context.Users
+                        from ur in u.Roles
+                        from r in context.Roles
+                        where ur.RoleId == r.Id
+                        select new { u.UserName, u.RealUserName, Permission = r.Name };
+            return query.ToList<object>();
+        }
+
+        internal bool RemoveUser(string username)
+        {
+            Models.ApplicationDbContext context = new Models.ApplicationDbContext();
+            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            userMgr.Delete(userMgr.FindByName(username));
+            return true;
+        }
+
+        internal bool UpdateUser(string username, string realUsername, string permission)
+        {
+            IdentityResult result = null;
+            Models.ApplicationDbContext context = new Models.ApplicationDbContext();
+            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            var user = userMgr.FindByName(username);
+            if (!string.IsNullOrEmpty(realUsername))
+            {
+                user.RealUserName = realUsername;
+                result = userMgr.Update(user);
+            }
+            if (!string.IsNullOrEmpty(permission) && !userMgr.IsInRole(user.Id, permission))
+            {
+                userMgr.RemoveFromRoles(user.Id, "read", "edit", "administrator");
+                switch (permission)
+                {
+                    case "administrator":
+                        result = userMgr.AddToRole(user.Id, "administrator");
+                        break;
+                    case "edit":
+                        result = userMgr.AddToRole(user.Id, "edit");
+                        break;
+                    default:
+                        result = userMgr.AddToRole(user.Id, "read");
+                        break;
+                }
+            }
+            if (result == IdentityResult.Success) return true; else return false;
         }
     }
 }
