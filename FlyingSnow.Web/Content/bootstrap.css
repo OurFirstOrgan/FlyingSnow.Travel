@@ -1573,6 +1573,7 @@ pre {
 table {
     max-width: 100%;
     background-color: transparent;
+    margin-right: 0px;
 }
 
 th {

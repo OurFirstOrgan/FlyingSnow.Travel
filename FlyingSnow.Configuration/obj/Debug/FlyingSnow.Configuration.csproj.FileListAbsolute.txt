@@ -1,4 +1,0 @@
-C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.dll
-C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\bin\Debug\FlyingSnow.Configuration.pdb
-C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.dll
-C:\Users\hzhang\Documents\GitHub\FlyingSnow.Travel\FlyingSnow.Configuration\obj\Debug\FlyingSnow.Configuration.pdb

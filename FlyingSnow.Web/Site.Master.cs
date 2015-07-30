@@ -44,6 +44,15 @@ namespace FlyingSnow.Web
                 Response.Cookies.Set(responseCookie);
             }
 
+            //if (!HttpContext.Current.User.Identity.IsAuthenticated)
+            //{
+            //    Response.Redirect("~/Account/Login");
+            //}
+            //else if (HttpContext.Current.User.IsInRole("administrator"))
+            //{
+            //    this.manageLink.Visible = true;
+            //}
+
             Page.PreLoad += master_Page_PreLoad;
         }
 
@@ -68,7 +77,10 @@ namespace FlyingSnow.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.User.IsInRole("administrator") || true)
+            {
+                adminLink.Visible = true;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

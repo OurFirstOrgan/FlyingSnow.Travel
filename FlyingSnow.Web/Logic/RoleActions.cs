@@ -38,5 +38,21 @@ namespace FlyingSnow.Web.Logic
                 IdUserResult = userMgr.AddToRole(userMgr.FindByName("administrator").Id, "administrator");
             }
         }
+
+        internal bool RemoveUser(string username)
+        {
+            Models.ApplicationDbContext context = new Models.ApplicationDbContext();
+            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+            userMgr.Delete(userMgr.FindByName(username));
+            return true;
+        }
+
+        internal List<ApplicationUser> GetAllUsers()
+        {
+            Models.ApplicationDbContext context = new Models.ApplicationDbContext();
+            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            return userMgr.Users.ToList();
+        }
     }
 }

@@ -5,11 +5,13 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using FlyingSnow.Web.Models;
+using System.Web.Http;
 
 namespace FlyingSnow.Web.Account
 {
     public partial class Login : Page
     {
+        [AllowAnonymous]
         protected void Page_Load(object sender, EventArgs e)
         {
             RegisterHyperLink.NavigateUrl = "Register";

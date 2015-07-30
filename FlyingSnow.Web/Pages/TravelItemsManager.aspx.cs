@@ -67,7 +67,7 @@ namespace FlyingSnow.Web.Pages
             Context.Response.ContentType = "Application/msword";
             string s = fileFolder + "\\" + fileName;
             Response.WriteFile(s);
-            //Response.Write(s);
+            Response.Write(fileName);
             Response.Flush();
             Response.Close();
         }
