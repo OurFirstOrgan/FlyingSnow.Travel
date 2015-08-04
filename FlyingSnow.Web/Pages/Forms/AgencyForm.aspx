@@ -189,7 +189,7 @@
                                     </div>
                                 </div>
                                 <div class="box-footer">
-                                    <button type="submit" class="btn btn-primary">提交</button>
+                                    <button id="ui_agencyButton" type="button" class="btn btn-primary">提交</button>
                                 </div>
                             </form>
                         </div>
@@ -203,10 +203,10 @@
                                 <form role="form">
                                     <div class="form-group">
                                         <label>内容</label>
-                                        <textarea class="form-control" rows="3" placeholder="输入 ..."></textarea>
+                                        <textarea id="ui_note" class="form-control" rows="3" placeholder="输入 ..."></textarea>
                                     </div>
                                     <div class="box-footer">
-                                        <button type="submit" class="btn btn-primary">提交</button>
+                                        <button id="ui_agencyCommentButton" type="button" class="btn btn-primary">提交</button>
                                     </div>
                                 </form>
                             </div>
@@ -219,4 +219,8 @@
     <script src="../../js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="../../js/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="../../js/SignalR/SignalRAgency.js"></script>
+    <script src="../../js/Pages/Page.AgencyForm.js"></script>
 </asp:Content>

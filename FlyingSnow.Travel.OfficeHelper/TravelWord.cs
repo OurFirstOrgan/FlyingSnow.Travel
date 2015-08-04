@@ -38,7 +38,7 @@ namespace FlyingSnow.Travel.OfficeHelper
 
             object[] fieldValues = new object[]{
                 item.Agency.AgencyName,
-                item.Agency.AgencyPhones,
+                item.Agency.AgencyPrincipalPhone,
                 item.Agency.AgencyFax,
                 item.Agency.AgencyPrincipal,
                 item.Agency.AgencyPrincipal,

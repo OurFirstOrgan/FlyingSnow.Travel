@@ -16,21 +16,27 @@ namespace FlyingSnow.Entries
         [Required]
         public string AgencyCode { get; set; }
         public string AgencyName { get; set; }
-        public List<string> AgencyPhonesList { get; set; }
-        public string AgencyPhones
-        {
-            get
-            {
-                return string.Join(";", AgencyPhonesList);
-            }
-            private set
-            {
-                AgencyPhonesList = value.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries).ToList();
-            }
-        }
-        public string AgencyFax { get; set; }
         public string AgencyPrincipal { get; set; }
         public string AgencyPrincipalPhone { get; set; }
+        public string AgencyFinancePhone { get; set; }
+        public string AgencyFax { get; set; }
         public string AgencyAddress { get; set; }
+        public string Note { get; set; }
+        public virtual List<TravelContact> Contacts { get; set; }
+        public string CreateBy { get; set; }
+        public string LastUpdateBy { get; set; }
+        public DateTime LastUpdateTime { get; set; }
+        //public List<string> AgencyPhonesList { get; set; }
+        //public string AgencyPhones
+        //{
+        //    get
+        //    {
+        //        return string.Join(";", AgencyPhonesList);
+        //    }
+        //    private set
+        //    {
+        //        AgencyPhonesList = value.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+        //    }
+        //}
     }
 }

@@ -42,8 +42,6 @@ namespace FlyingSnow.Web.Pages
 #if  true
             agency.AgencyCode = this.AgencyCode.Text;
             agency.AgencyName = this.AgencyName.Text;
-            agency.AgencyPhonesList = new List<string>();
-            agency.AgencyPhonesList.Add(this.AgencyPhone.Text);
             agency.AgencyFax = this.AgencyFax.Text;
             agency.AgencyPrincipal = this.AgencyPrincipal.Text;
             agency.AgencyPrincipalPhone = this.AgencyPrincipalPhone.Text;
@@ -82,8 +80,8 @@ namespace FlyingSnow.Web.Pages
             agency.AgencyGuid = new Guid(this.HideGuid.Text);
             agency.AgencyCode = this.AgencyCode.Text;
             agency.AgencyName = this.AgencyName.Text;
-            agency.AgencyPhonesList = new List<string>();
-            agency.AgencyPhonesList.Add(this.AgencyPhone.Text);
+            //agency.AgencyPhonesList = new List<string>();
+            //agency.AgencyPhonesList.Add(this.AgencyPhone.Text);
             agency.AgencyFax = this.AgencyFax.Text;
             agency.AgencyPrincipal = this.AgencyPrincipal.Text;
             agency.AgencyPrincipalPhone = this.AgencyPrincipalPhone.Text;
@@ -108,7 +106,7 @@ namespace FlyingSnow.Web.Pages
             this.HideGuid.Text = agency.AgencyGuid.ToString();
             this.AgencyCode.Text = agency.AgencyCode;
             this.AgencyName.Text = agency.AgencyName;
-            this.AgencyPhone.Text = agency.AgencyPhones;
+            this.AgencyPhone.Text = agency.AgencyPrincipalPhone;
             this.AgencyFax.Text = agency.AgencyFax;
             this.AgencyPrincipal.Text = agency.AgencyPrincipal;
             this.AgencyPrincipalPhone.Text = agency.AgencyPrincipalPhone;

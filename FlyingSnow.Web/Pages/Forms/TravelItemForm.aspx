@@ -116,7 +116,6 @@
         <aside class="right-side">
             <section class="content-header">
                 <h1>订单表单
-                   
                     <small>预览</small>
                 </h1>
                 <ol class="breadcrumb">
@@ -222,7 +221,7 @@
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-cny"></i></span>
                                             <input type="text" class="form-control" id="ui_earnestTotal" placeholder="总价">
-                                            <span class="input-group-addon"><i class="fa fa-rotate-right"></i></span>
+                                            <span id="ui_earnestSubtotal" class="input-group-addon"><i class="fa fa-rotate-right"></i></span>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -240,13 +239,13 @@
                                 <div class="box-header">
                                     <h6 class="box-title">登记信息</h6>
                                 </div>
-                                <div class="box-body">
+                                <div class="box-body" id="ui_customsBox" count="1">
                                     <div class="form-group">
                                         <div class="input-group">
                                             <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                                            <input type="text" class="form-control" id="ui_customerName1" placeholder="客人姓名" />
+                                            <input type="text" class="form-control" id="ui_customerName0" placeholder="客人姓名" />
                                             <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input type="text" class="form-control" id="ui_customerIdCard1" placeholder="身份证" />
+                                            <input type="text" class="form-control" id="ui_customerIdCard0" placeholder="身份证" />
                                         </div>
                                     </div>
                                 </div>
@@ -305,294 +304,6 @@
                             <h3 class="box-title">去时</h3>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="box box-default">
-                            <div class="box-header">
-                                <h5 class="box-title">订单</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="box box-danger">
-                            <div class="box-header">
-                                <h3 class="box-title">Input masks</h3>
-                            </div>
-                            <div class="box-body">
-                                <!-- Date dd/mm/yyyy -->
-                                <div class="form-group">
-                                    <label>Date masks:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask />
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- Date mm/dd/yyyy -->
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask />
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- phone mask -->
-                                <div class="form-group">
-                                    <label>US phone mask:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-phone"></i>
-                                        </div>
-                                        <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask />
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- phone mask -->
-                                <div class="form-group">
-                                    <label>Intl US phone mask:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-phone"></i>
-                                        </div>
-                                        <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask />
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- IP mask -->
-                                <div class="form-group">
-                                    <label>IP mask:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-laptop"></i>
-                                        </div>
-                                        <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask />
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-
-                        <div class="box box-info">
-                            <div class="box-header">
-                                <h3 class="box-title">Color & Time Picker</h3>
-                            </div>
-                            <div class="box-body">
-                                <!-- Color Picker -->
-                                <div class="form-group">
-                                    <label>Color picker:</label>
-                                    <input type="text" class="form-control my-colorpicker1" />
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- Color Picker -->
-                                <div class="form-group">
-                                    <label>Color picker with addon:</label>
-                                    <div class="input-group my-colorpicker2">
-                                        <input type="text" class="form-control" />
-                                        <div class="input-group-addon">
-                                            <i></i>
-                                        </div>
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- time Picker -->
-                                <div class="bootstrap-timepicker">
-                                    <div class="form-group">
-                                        <label>Time picker:</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control timepicker" />
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-clock-o"></i>
-                                            </div>
-                                        </div>
-                                        <!-- /.input group -->
-                                    </div>
-                                    <!-- /.form group -->
-                                </div>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-
-                    </div>
-                    <!-- /.col (left) -->
-                    <div class="col-md-6">
-                        <div class="box box-primary">
-                            <div class="box-header">
-                                <h3 class="box-title">Date picker</h3>
-                            </div>
-                            <div class="box-body">
-                                <!-- Date range -->
-                                <div class="form-group">
-                                    <label>Date range:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-calendar"></i>
-                                        </div>
-                                        <input type="text" class="form-control pull-right" id="reservation" />
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- Date and time range -->
-                                <div class="form-group">
-                                    <label>Date and time range:</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon">
-                                            <i class="fa fa-clock-o"></i>
-                                        </div>
-                                        <input type="text" class="form-control pull-right" id="reservationtime" />
-                                    </div>
-                                    <!-- /.input group -->
-                                </div>
-                                <!-- /.form group -->
-
-                                <!-- Date and time range -->
-                                <div class="form-group">
-                                    <label>Date range button:</label>
-                                    <div class="input-group">
-                                        <button class="btn btn-default pull-right" id="daterange-btn">
-                                            <i class="fa fa-calendar"></i>Date range picker
-                                               
-                                            <i class="fa fa-caret-down"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- /.form group -->
-
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-
-                        <!-- iCheck -->
-                        <div class="box box-success">
-                            <div class="box-header">
-                                <h3 class="box-title">iCheck - Checkbox & Radio Inputs</h3>
-                            </div>
-                            <div class="box-body">
-                                <!-- Minimal style -->
-
-                                <!-- checkbox -->
-                                <div class="form-group">
-                                    <label>
-                                        <input type="checkbox" class="minimal" checked />
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="minimal" />
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="minimal" disabled />
-                                        Minimal skin checkbox
-                                       
-                                    </label>
-                                </div>
-
-                                <!-- radio -->
-                                <div class="form-group">
-                                    <label>
-                                        <input type="radio" name="r1" class="minimal" checked />
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="r1" class="minimal" />
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="r1" class="minimal" disabled />
-                                        Minimal skin radio
-                                       
-                                    </label>
-                                </div>
-
-                                <!-- Minimal red style -->
-
-                                <!-- checkbox -->
-                                <div class="form-group">
-                                    <label>
-                                        <input type="checkbox" class="minimal-red" checked />
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="minimal-red" />
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="minimal-red" disabled />
-                                        Minimal red skin checkbox
-                                       
-                                    </label>
-                                </div>
-
-                                <!-- radio -->
-                                <div class="form-group">
-                                    <label>
-                                        <input type="radio" name="r2" class="minimal-red" checked />
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="r2" class="minimal-red" />
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="r2" class="minimal-red" disabled />
-                                        Minimal red skin radio
-                                       
-                                    </label>
-                                </div>
-
-                                <!-- Minimal red style -->
-
-                                <!-- checkbox -->
-                                <div class="form-group">
-                                    <label>
-                                        <input type="checkbox" class="flat-red" checked />
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="flat-red" />
-                                    </label>
-                                    <label>
-                                        <input type="checkbox" class="flat-red" disabled />
-                                        Flat red skin checkbox
-                                       
-                                    </label>
-                                </div>
-
-                                <!-- radio -->
-                                <div class="form-group">
-                                    <label>
-                                        <input type="radio" name="r3" class="flat-red" checked />
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="r3" class="flat-red" />
-                                    </label>
-                                    <label>
-                                        <input type="radio" name="r3" class="flat-red" disabled />
-                                        Flat red skin radio
-                                       
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="box-footer">
-                                Many more skins available.
-                           
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
         </aside>
@@ -603,10 +314,8 @@
     <script src="../../js/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
     <script src="../../js/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
     <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(function () {
-            $("#datemask").inputmask("yyyy/mm/dd", { "placeholder": "yyyy/mm/dd" });
-            $("[data-mask]").inputmask();
-        })
-    </script>
+    <script src="../../js/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="../../js/SignalR/SignalRAgency.js"></script>
+    <script src="../../js/Pages/Page.TravelItemForm.js" type="text/javascript"></script>
 </asp:Content>
