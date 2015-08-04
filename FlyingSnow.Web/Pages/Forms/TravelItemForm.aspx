@@ -153,7 +153,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ui_tourRoute">出发日期</label>
+                                        <label for="ui_travelDate">出发日期</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>

@@ -146,6 +146,15 @@
                                         <label for="ui_agencyFax">传真</label>
                                         <input type="text" class="form-control" id="ui_agencyFax" placeholder="旅行社传真">
                                     </div>
+                                    <div class="form-group">
+                                        <label for="ui_date1">日期</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control" id="ui_date1" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -155,9 +164,46 @@
                                     <h4 class="box-title">地接社</h4>
                                 </div>
                                 <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="ui_operatorName">名称</label>
+                                        <input type="text" class="form-control" id="ui_operatorName" placeholder="旅行社名称">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_operatorPrincipal">接待人</label>
+                                        <input type="text" class="form-control" id="ui_operatorPrincipal" placeholder="旅行社确认人">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_operatorPrincipalPhone">接待人电话</label>
+                                        <input type="text" class="form-control" id="ui_operatorPrincipalPhone" placeholder="负责人电话">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_operatorFax">传真</label>
+                                        <input type="text" class="form-control" id="ui_operatorFax" placeholder="旅行社传真">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_date2">日期</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control" id="ui_date2" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box box-info">
+                                <div class="box-header">
+                                    <h4 class="box-title">附加</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button id="ui_export" type="button" class="btn btn-primary">导出</button>
                     </div>
                 </div>
             </section>
