@@ -679,6 +679,7 @@
     <Content Include="fonts\ionicons.eot" />
     <Content Include="fonts\ionicons.ttf" />
     <Content Include="fonts\ionicons.woff" />
+    <Content Include="js\Pages\Page.ConfirmationPre.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Pages\AgencyConfirmation.aspx" />
     <Content Include="Pages\AgencyManager.aspx" />
@@ -688,6 +689,9 @@
     <Content Include="Pages\Forms\advanced.html" />
     <Content Include="Pages\Forms\AgencyForm.aspx" />
     <Content Include="Pages\Forms\TravelItemForm.aspx" />
+    <Content Include="Pages\Table\AgenciesTable.aspx" />
+    <Content Include="Pages\Table\data.html" />
+    <Content Include="Pages\Table\simple.html" />
     <Content Include="Pages\TravelItemPage.aspx" />
     <Content Include="Pages\TravelItemsManager.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -915,6 +919,13 @@
     </Compile>
     <Compile Include="Pages\Forms\TravelItemForm.aspx.designer.cs">
       <DependentUpon>TravelItemForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Table\AgenciesTable.aspx.cs">
+      <DependentUpon>AgenciesTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Table\AgenciesTable.aspx.designer.cs">
+      <DependentUpon>AgenciesTable.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\TravelItemPage.aspx.cs">
       <DependentUpon>TravelItemPage.aspx</DependentUpon>

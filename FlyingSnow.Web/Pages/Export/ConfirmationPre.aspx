@@ -199,12 +199,94 @@
                                 <div class="box-header">
                                     <h4 class="box-title">附加</h4>
                                 </div>
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <select id="ui_select" class="form-control">
+                                            <option value="common">通用</option>
+                                            <option value="beijing">北京</option>
+                                        </select>
+                                    </div>
+                                    <div id="ui_beijingGroup" class="form-group hide">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">客人姓名</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">人数</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">电话</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">抵京日期/车次</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">团型</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">几天几晚</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">住宿标准</label>
+                                                    <input type="text" class="form-control" />
+                                                    <label class="input-group-addon">星</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">送站日期</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">返程票</label>
+                                                    <input type="text" class="form-control" />
+                                                    <label class="input-group-addon">返长春</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <label class="input-group-addon">结算</label>
+                                                    <input type="text" class="form-control" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="box-footer">
-                        <button id="ui_export" type="button" class="btn btn-primary">导出</button>
-                    </div>
+                </div>
+                <div class="box-footer">
+                    <button id="ui_export" type="button" class="btn btn-primary">导出</button>
                 </div>
             </section>
         </aside>
@@ -212,4 +294,5 @@
     <script src="../../js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="../../js/Pages/Page.ConfirmationPre.js"></script>
 </asp:Content>

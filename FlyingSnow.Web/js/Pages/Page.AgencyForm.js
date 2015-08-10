@@ -1,5 +1,5 @@
 ﻿$(function () {
-    SRJoinGroup("123");
+    //SRJoinGroup("123");
     $("#ui_agencyButton").bind("click", function () {
         CreateAgency();
         $("#ui_agencyButton").addClass("disabled");
