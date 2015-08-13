@@ -277,6 +277,95 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box box-default">
+                                <div class="box-header">
+                                    <h3 class="box-title">去时</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="ui_onwardTicket1">去程票价1</label>
+                                        <input type="text" class="form-control" id="ui_onwardTicket1" placeholder="去程票价1" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_onwardServiceCharge1">去程服务费1</label>
+                                        <input type="text" class="form-control" id="ui_onwardServiceCharge1" placeholder="去程服务费1" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_onwardTicket2">去程票价2</label>
+                                        <input type="text" class="form-control" id="ui_onwardTicket2" placeholder="去程票价2" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_onwardServiceCharge2">去程服务费2</label>
+                                        <input type="text" class="form-control" id="ui_onwardServiceCharge2" placeholder="去程服务费2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="box box-default">
+                                <div class="box-header">
+                                    <h3 class="box-title">回程</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="ui_backwardTicket1">回程票价1</label>
+                                        <input type="text" class="form-control" id="ui_backwardTicket1" placeholder="回程票价1" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_backwardServiceCharge1">回程服务费1</label>
+                                        <input type="text" class="form-control" id="ui_backwardServiceCharge1" placeholder="回程服务费1" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_backwardTicket2">回程票价2</label>
+                                        <input type="text" class="form-control" id="ui_backwardTicket2" placeholder="回程票价2" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_backwardServiceCharge2">回程服务费2</label>
+                                        <input type="text" class="form-control" id="ui_backwardServiceCharge2" placeholder="回程服务费2" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box box-default">
+                                <div class="box-header">
+                                    <h3 class="box-title">费用</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="ui_dropoffChargeFee">送机费</label>
+                                        <input type="text" class="form-control" id="ui_dropoffChargeFee" placeholder="送机费" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_dropoffChargeFee">保险费</label>
+                                        <input type="text" class="form-control" id="ui_insuranceFee" placeholder="保险费" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_atTimeRefund">现退款</label>
+                                        <input type="text" class="form-control" id="ui_atTimeRefund" placeholder="现退款" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_atTimeAccept">现收款</label>
+                                        <input type="text" class="form-control" id="ui_atTimeAccept " placeholder="现收款" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_otherPrice">其他费</label>
+                                        <input type="text" class="form-control" id="ui_otherPrice" placeholder="其他费" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_otherDescription">其他说明</label>
+                                        <input type="text" class="form-control" id="ui_otherDescription" placeholder="其他说明" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="box box-default">
                                 <div class="box-header">
@@ -299,10 +388,122 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box box-default">
-                        <div class="box-header">
-                            <h3 class="box-title">去时</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="box box-danger">
+                                <div class="box-header">
+                                    <h3 class="box-title">信息</h3>
+                                </div>
+                                <div class="box-body">
+                                    <div class="form-group">
+                                        <label for="ui_arriveDate">抵达日期</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control" id="ui_arriveDate" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_arriveTrain">抵达车次</label>
+                                        <input type="text" class="form-control" id="ui_arriveTrain" placeholder="抵达车次" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_groupType">团型</label>
+                                        <input type="text" class="form-control" id="ui_groupType" placeholder="团型" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_durationDay">住宿时间</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="ui_durationDay" placeholder="几" />
+                                            <span class="input-group-addon">天</span>
+                                            <input type="text" class="form-control" id="ui_durationNight" placeholder="几" />
+                                            <span class="input-group-addon">晚</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_hotelStandard">住宿时间</label>
+                                        <div class="input-group">
+                                            <label>
+                                                <input type="radio" name="standard" class="minimal" />
+                                            </label>
+                                            <label>准三</label>
+                                            <label>
+                                                <input type="radio" name="standard" class="minimal" />
+                                            </label>
+                                            <label>准四</label>
+                                            <label>
+                                                <input type="radio" name="standard" class="minimal" />
+                                            </label>
+                                            <label>准五</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_backDatePlan">计划返程日期</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control" id="ui_backDatePlan" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask />
+                                        </div>
+                                        <label>
+                                            <input type="radio" name="seeOff" class="minimal" />
+                                        </label>
+                                        <label>送站</label>
+                                        <label>
+                                            <input type="radio" name="seeOff" class="minimal" />
+                                        </label>
+                                        <label>不送站</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_backTicket">返程票</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="ui_backTicket" placeholder="返程票" />
+                                            <span class="input-group-addon">车次
+                                            </span>
+                                        </div>
+                                        <label>
+                                            <input type="radio" name="backTicket" class="minimal" />
+                                        </label>
+                                        <label>我社自理</label>
+                                        <label>
+                                            <input type="radio" name="backTicket" class="minimal" />
+                                        </label>
+                                        <label>贵社出</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="ui_backTicketPrice">返票价格</label>
+                                        <input type="text" class="form-control" id="ui_backTicketPrice" placeholder="返票价格" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label>价格结算</label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="ui_settlementPriceAdult">成人</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-cny"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="ui_settlementPriceAdult" placeholder="儿童价格" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="ui_settlementPriceChild">儿童</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-cny"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" id="ui_settlementPriceChild" placeholder="儿童价格" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="box-footer">
+                        <button id="ui_itemButton" type="button" class="btn btn-primary">提交</button>
                     </div>
                 </div>
             </section>
