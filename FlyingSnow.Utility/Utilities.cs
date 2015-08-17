@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace FlyingSnow.Utility
 {
@@ -73,7 +74,7 @@ namespace FlyingSnow.Utility
             {
                 return decryptString;
             }
-        } 
+        }
         #endregion
 
         #region Convert to ArrayList from Objects
@@ -85,6 +86,28 @@ namespace FlyingSnow.Utility
                 parms.Add(arg);
             }
             return parms;
+        }
+        #endregion
+
+        #region Json Convert
+        public static T JsonDeserialize<T>(string json)
+        {
+            if (!string.IsNullOrEmpty(json))
+            {
+                JavaScriptSerializer jsonSerializer = new JavaScriptSerializer();
+                jsonSerializer.MaxJsonLength = Int32.MaxValue;
+                return jsonSerializer.Deserialize<T>(json);
+            }
+            else
+            {
+                return default(T);
+            }
+        }
+        public static string JsonSerialize(object obj)
+        {
+            JavaScriptSerializer jsonSerializer = new JavaScriptSerializer();
+            jsonSerializer.MaxJsonLength = Int32.MaxValue;
+            return jsonSerializer.Serialize(obj);
         }
         #endregion
     }

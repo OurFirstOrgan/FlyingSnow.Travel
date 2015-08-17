@@ -188,9 +188,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="box-footer">
-                                    <button id="ui_agencyButton" type="button" class="btn btn-primary">提交</button>
-                                </div>
                             </form>
                         </div>
                     </div>
@@ -205,13 +202,13 @@
                                         <label>内容</label>
                                         <textarea id="ui_note" class="form-control" rows="3" placeholder="输入 ..."></textarea>
                                     </div>
-                                    <div class="box-footer">
-                                        <button id="ui_agencyCommentButton" type="button" class="btn btn-primary">提交</button>
-                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="box-footer">
+                    <button id="ui_agencyButton" type="button" class="btn btn-primary">提交</button>
                 </div>
             </section>
         </aside>

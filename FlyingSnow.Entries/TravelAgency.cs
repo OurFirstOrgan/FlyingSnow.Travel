@@ -22,7 +22,7 @@ namespace FlyingSnow.Entries
         public string AgencyFax { get; set; }
         public string AgencyAddress { get; set; }
         public string Note { get; set; }
-        public virtual List<TravelContact> Contacts { get; set; }
+        public virtual List<TravelContact> AgencyContacts { get; set; }
         public string CreateBy { get; set; }
         public string LastUpdateBy { get; set; }
         public DateTime LastUpdateTime { get; set; }

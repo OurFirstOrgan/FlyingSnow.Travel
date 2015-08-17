@@ -1,12 +1,9 @@
 ﻿$(function () {
-    //SRJoinGroup("123");
+    SRJoinGroup("123");
     $("#ui_agencyButton").bind("click", function () {
         CreateAgency();
         $("#ui_agencyButton").addClass("disabled");
         $("#ui_agencyCommentButton").addClass("disabled");
-    });
-    $("#ui_agencyCommentButton").bind("click", function () {
-        alert("success too");
     });
 })
 
@@ -25,11 +22,16 @@ function AssemblyAgency() {
     agency.AgencyFax = $("#ui_agencyFax").val();
     agency.AgencyAddress = $("#ui_agencyAddress").val();
     agency.AgencyContacts = [];
-    agency.AgencyContacts.push({ Name: $("#ui_agencyContactU1").val(), QQ: $("#ui_agencyContactQQ1").val() });
-    agency.AgencyContacts.push({ Name: $("#ui_agencyContactU2").val(), QQ: $("#ui_agencyContactQQ2").val() });
-    agency.AgencyContacts.push({ Name: $("#ui_agencyContactU3").val(), QQ: $("#ui_agencyContactQQ3").val() });
+    if ($("#ui_agencyContactU1").val() || $("#ui_agencyContactQQ1").val()) {
+        agency.AgencyContacts.push({ Name: $("#ui_agencyContactU1").val(), QQ: $("#ui_agencyContactQQ1").val() });
+    }
+    if ($("#ui_agencyContactU2").val() || $("#ui_agencyContactQQ2").val()) {
+        agency.AgencyContacts.push({ Name: $("#ui_agencyContactU2").val(), QQ: $("#ui_agencyContactQQ2").val() });
+    }
+    if ($("#ui_agencyContactU3").val() || $("#ui_agencyContactQQ3").val()) {
+        agency.AgencyContacts.push({ Name: $("#ui_agencyContactU3").val(), QQ: $("#ui_agencyContactQQ3").val() });
+    }
     agency.Note = $("#ui_note").val();
-
     agency.CreateBy = "";
     return agency;
 }
