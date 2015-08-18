@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -357,6 +358,8 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-ui-1.10.3.js" />
     <Content Include="js\jquery-ui-1.10.3.min.js" />
+    <Content Include="js\knockout-3.3.0.js" />
+    <Content Include="js\knockout.simpleGrid.3.0.js" />
     <Content Include="js\Pages\Page.AgencyForm.js" />
     <Content Include="js\Pages\Page.TravelItemForm.js" />
     <Content Include="js\plugins\bootstrap-slider\bootstrap-slider.js" />
