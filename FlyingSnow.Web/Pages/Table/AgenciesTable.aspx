@@ -189,6 +189,7 @@
     <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
     <script src="../../js/knockout-3.3.0.js" type="text/javascript"></script>
     <script src="../../js/knockout.simpleGrid.3.0.js" type="text/javascript"></script>
+    <script src="../../js/common.js" type="text/javascript"></script>
     <script type="text/javascript">
         function ProductisViewModel() {
             var lists = [

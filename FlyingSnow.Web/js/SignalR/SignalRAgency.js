@@ -15,4 +15,9 @@ function SRJoinGroup(group) {
 }
 
 function CreateAgencyCallBack(success, caller, context) {
+    if (success) {
+        if (caller) {
+
+        }
+    }
 }

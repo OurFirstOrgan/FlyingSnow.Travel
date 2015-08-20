@@ -169,28 +169,28 @@
                                     <li>
                                         <a href="#">
                                             <i class="ion ion-ios7-people info"></i>5 new members joined today
-                                            </a>
+                                        </a>
                                     </li>
                                     <li>
                                         <a href="#">
                                             <i class="fa fa-warning danger"></i>Very long description here that may not fit into the page and may cause design problems
-                                            </a>
+                                        </a>
                                     </li>
                                     <li>
                                         <a href="#">
                                             <i class="fa fa-users warning"></i>5 new members joined
-                                            </a>
+                                        </a>
                                     </li>
 
                                     <li>
                                         <a href="#">
                                             <i class="ion ion-ios7-cart success"></i>25 sales made
-                                            </a>
+                                        </a>
                                     </li>
                                     <li>
                                         <a href="#">
                                             <i class="ion ion-ios7-person danger"></i>You changed your username
-                                            </a>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
@@ -324,5 +324,22 @@
     <footer>
         <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
     </footer>
+    <div id="andy-alert" class="modal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <h5 class="modal-title"><i class="fa fa-exclamation-circle"></i>[Title]</h5>
+                </div>
+                <div class="modal-body small">
+                    <p>[Message]</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary ok" data-dismiss="modal">[BtnOk]</button>
+                    <button type="button" class="btn btn-default cancel" data-dismiss="modal">[BtnCancel]</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
