@@ -17,7 +17,12 @@ function SRJoinGroup(group) {
 function CreateAgencyCallBack(success, caller, context) {
     if (success) {
         if (caller) {
-
+            AndyAlert({
+                msg: '保存成功',
+                title: '标题',
+                btnok: '确定',
+                btncl: '取消'
+            });
         }
     }
 }

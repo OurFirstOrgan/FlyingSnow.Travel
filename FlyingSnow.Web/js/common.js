@@ -1,5 +1,6 @@
-﻿$(function () {
-    window.Modal = function () {
+﻿var AndyModal;
+$(function () {
+    AndyModal = function () {
         var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm');
         var alr = $("#andy-alert");
         var ahtml = alr.html();
@@ -65,3 +66,7 @@
         }
     }();
 });
+
+function AndyAlert(options) {
+    AndyModal.alert(options);
+}

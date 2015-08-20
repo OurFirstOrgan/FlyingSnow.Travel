@@ -130,7 +130,7 @@
                                     <div class="input-group">
                                         <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search" />
                                         <div class="input-group-btn">
-                                            <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                                            <button id="ui_searchButton" class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -190,6 +190,7 @@
     <script src="../../js/knockout-3.3.0.js" type="text/javascript"></script>
     <script src="../../js/knockout.simpleGrid.3.0.js" type="text/javascript"></script>
     <script src="../../js/common.js" type="text/javascript"></script>
+    <script src="../../js/Pages/Page.AgenciesTable.js"></script>
     <script type="text/javascript">
         function ProductisViewModel() {
             var lists = [
