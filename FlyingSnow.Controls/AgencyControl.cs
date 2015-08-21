@@ -13,6 +13,22 @@ namespace FlyingSnow.Controls
     {
 
         #region Get
+        public List<TravelAgency> GetAllAgencies()
+        {
+            List<TravelAgency> results = null;
+            try
+            {
+                using (var db = new EntryContext())
+                {
+                    results = db.TravelAgencies.Include("AgencyContacts").ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logs.Error("GetAllAgencies Exception : " + ex.ToString());
+            }
+            return results;
+        }
         public List<TravelAgency> GetAgencies()
         {
             List<TravelAgency> results = null;
