@@ -1,7 +1,8 @@
-﻿$(function () {
-    window.Modal = function () {
+﻿var AndyModal;
+$(function () {
+    AndyModal = function () {
         var reg = new RegExp("\\[([^\\[\\]]*?)\\]", 'igm');
-        var alr = $("#andy-alert");
+        var alr = $("#andyAlert");
         var ahtml = alr.html();
         //关闭时恢复 modal html 原样，供下次调用时 replace 用
         //var _init = function () {
