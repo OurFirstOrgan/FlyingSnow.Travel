@@ -128,7 +128,7 @@
                                 <h3 class="box-title">地接社表格</h3>
                                 <div class="box-tools">
                                     <div class="input-group">
-                                        <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search" />
+                                        <input id="ui_searchText" type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Search" />
                                         <div class="input-group-btn">
                                             <button id="ui_searchButton" class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                                         </div>
@@ -144,24 +144,28 @@
                                             <th>负责人</th>
                                             <th>联系人电话</th>
                                             <th>传真</th>
+                                            <th>地址</th>
                                         </tr>
                                     </thead>
-                                    <tbody data-bind="foreach: products">
+                                    <tbody data-bind="foreach: agencies">
                                         <tr>
                                             <td>
-                                                <span data-bind="text: $data.A"></span>
+                                                <span data-bind="text: $data.AgencyCode"></span>
                                             </td>
                                             <td>
-                                                <span data-bind="text: $data.B"></span>
+                                                <span data-bind="text: $data.AgencyName"></span>
                                             </td>
                                             <td>
-                                                <span data-bind="text: $data.C"></span>
+                                                <span data-bind="text: $data.AgencyPrincipal"></span>
                                             </td>
                                             <td>
-                                                <span data-bind="text: $data.D"></span>
+                                                <span data-bind="text: $data.AgencyPrincipalPhone""></span>
                                             </td>
                                             <td>
-                                                <span data-bind="text: $data.E"></span>
+                                                <span data-bind="text: $data.AgencyFax"></span>
+                                            </td>
+                                            <td>
+                                                <span data-bind="text: $data.AgencyAddress"></span>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -169,7 +173,7 @@
                                     </tfoot>
                                 </table>
                             </div>
-                            <div class="box-footer clearfix">
+                     <%--       <div class="box-footer clearfix">
                                 <ul class="pagination pagination-sm no-margin pull-right">
                                     <li><a href="#">&laquo;</a></li>
                                     <li><a href="#">1</a></li>
@@ -177,13 +181,16 @@
                                     <li><a href="#">3</a></li>
                                     <li><a href="#">&raquo;</a></li>
                                 </ul>
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
                 </div>
             </section>
         </aside>
     </div>
+    <script type="text/javascript">
+        var PageInfo = <% =a_result %>;
+    </script>
     <script src="../../js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
@@ -191,21 +198,4 @@
     <script src="../../js/knockout.simpleGrid.3.0.js" type="text/javascript"></script>
     <script src="../../js/common.js" type="text/javascript"></script>
     <script src="../../js/Pages/Page.AgenciesTable.js"></script>
-    <script type="text/javascript">
-        function ProductisViewModel() {
-            var lists = [
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" },
-            { A: "183", B: "John Doe", C: "11-7-2014", D: "Approved", E: "Bacon ipsum dolor sit amet salami venison chicken flank fatback doner" }
-            ];
-            self.products = ko.observableArray(lists);
-        }
-        ko.applyBindings(new ProductisViewModel());
-    </script>
 </asp:Content>

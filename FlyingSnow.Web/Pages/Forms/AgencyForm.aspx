@@ -219,5 +219,6 @@
     <script src="../../js/jquery.signalR-2.2.0.min.js"></script>
     <script src="/signalr/hubs"></script>
     <script src="../../js/SignalR/SignalRAgency.js"></script>
+    <script src="../../js/common.js"></script>
     <script src="../../js/Pages/Page.AgencyForm.js"></script>
 </asp:Content>

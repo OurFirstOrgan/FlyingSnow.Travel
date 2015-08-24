@@ -324,7 +324,7 @@
     <footer>
         <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
     </footer>
-    <div id="andy-alert" class="modal">
+    <div id="andyAlert" class="modal">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">

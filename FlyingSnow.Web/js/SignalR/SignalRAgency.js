@@ -23,6 +23,7 @@ function CreateAgencyCallBack(success, caller, context) {
                 btnok: '确定',
                 btncl: '取消'
             });
+            window.location.href = "/Pages/Table/AgenciesTable.aspx";
         }
     }
 }
