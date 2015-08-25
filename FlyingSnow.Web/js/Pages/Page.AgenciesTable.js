@@ -19,6 +19,10 @@ function SearchAgencies() {
     } else {
         GetAllAgencies();
     }
+    self.agencies.removeAll();
+    for (var i in tableDatas) {
+        self.agencies.push(tableDatas[i]);
+    }
 }
 
 function GetAllAgencies() {
@@ -28,5 +32,9 @@ function GetAllAgencies() {
 
 function GetAgenciesByFilter(input) {
     tableDatas = [];
-    ko.applyBindings(new AgenciesViewModel());
+    for (var i in PageInfo.Agencies) {
+        if (PageInfo.Agencies[i].AgencyCode.indexOf(input) != -1 || PageInfo.Agencies[i].AgencyName.indexOf(input) != -1) {
+            tableDatas.push(PageInfo.Agencies[i])
+        }
+    }
 }

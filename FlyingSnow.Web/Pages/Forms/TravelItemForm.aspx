@@ -135,7 +135,7 @@
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="ui_customerName">客人姓名</label>
-                                        <input type="text" class="form-control" id="ui_customerName" placeholder="旅行社名称">
+                                        <input type="text" class="form-control" id="ui_customerName" placeholder="客人姓名">
                                     </div>
                                     <div class="form-group">
                                         <label for="ui_customerName1">客人电话</label>
@@ -338,11 +338,11 @@
                                 </div>
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label for="ui_dropoffChargeFee">送机费</label>
-                                        <input type="text" class="form-control" id="ui_dropoffChargeFee" placeholder="送机费" />
+                                        <label for="ui_seeOffFee">送机费</label>
+                                        <input type="text" class="form-control" id="ui_seeOffFee" placeholder="送机费" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="ui_dropoffChargeFee">保险费</label>
+                                        <label for="ui_insuranceFee">保险费</label>
                                         <input type="text" class="form-control" id="ui_insuranceFee" placeholder="保险费" />
                                     </div>
                                     <div class="form-group">
@@ -351,7 +351,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="ui_atTimeAccept">现收款</label>
-                                        <input type="text" class="form-control" id="ui_atTimeAccept " placeholder="现收款" />
+                                        <input type="text" class="form-control" id="ui_atTimeAccept" placeholder="现收款" />
                                     </div>
                                     <div class="form-group">
                                         <label for="ui_otherPrice">其他费</label>
@@ -422,7 +422,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="ui_hotelStandard">住宿时间</label>
+                                        <label for="ui_hotelStandard">住宿标准</label>
                                         <div class="input-group">
                                             <label>
                                                 <input type="radio" name="standard" class="minimal" />
@@ -484,7 +484,7 @@
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-cny"></i>
                                                     </div>
-                                                    <input type="text" class="form-control" id="ui_settlementPriceAdult" placeholder="儿童价格" />
+                                                    <input type="text" class="form-control" id="ui_settlementPriceAdult" placeholder="成人价格" />
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

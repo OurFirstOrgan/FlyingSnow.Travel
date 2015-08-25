@@ -17,8 +17,7 @@ namespace FlyingSnow.Web
         {
             // Code that runs on application startup
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-
+            
             System.Data.Entity.Database.SetInitializer(new FlyingSnow.Database.DatabaseInitializer());
 
             //Database
