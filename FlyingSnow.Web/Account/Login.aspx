@@ -1,65 +1,65 @@
-﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="FlyingSnow.Web.Account.Login" Async="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="FlyingSnow.Web.Account.Login" %>
 
-<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
+<!DOCTYPE html>
 
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
-
-    <div class="row">
-        <div class="col-md-8">
-            <section id="loginForm">
-                <div class="form-horizontal">
-                    <h4>Use a local account to log in.</h4>
-                    <hr />
-                    <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
-                        <p class="text-danger">
-                            <asp:Literal runat="server" ID="FailureText" />
-                        </p>
-                    </asp:PlaceHolder>
-                    <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Username" CssClass="col-md-2 control-label">UserName</asp:Label>
-                        <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Username" CssClass="form-control" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Username"
-                                CssClass="text-danger" ErrorMessage="The Username field is required." />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Log in</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/ionicons.min.css" rel="stylesheet" />
+    <link href="../css/AdminLTE.min.css" rel="stylesheet" />
+    <link href="../css/iCheck/square/blue.css" rel="stylesheet" />
+</head>
+<body class="hold-transition login-page">
+    <div class="login-box">
+        <div class="login-logo">
+            <b>登录管理</b>
+        </div>
+        <div class="login-box-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+            <form id="ui_loginForm" runat="server" method="post">
+                <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
+                    <p class="text-danger">
+                        <asp:Literal runat="server" ID="FailureText" />
+                    </p>
+                </asp:PlaceHolder>
+                <div class="form-group has-feedback">
+                    <label for="ui_usernameInput">账号</label>
+                    <asp:TextBox ID="ui_usernameInput" CssClass="form-control" runat="server"></asp:TextBox>
+                    <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ui_usernameInput" CssClass="text-danger" ErrorMessage="The Username field is required." />
+                </div>
+                <div class="form-group has-feedback">
+                    <label for="ui_passwordInput">密码</label>
+                    <asp:TextBox ID="ui_passwordInput" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ui_passwordInput" CssClass="text-danger" ErrorMessage="The password field is required." />
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <label>
+                                <asp:CheckBox ID="ui_rememberCheck" runat="server" />
+                                Remember Me
+                            </label>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
-                        <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <div class="checkbox">
-                                <asp:CheckBox runat="server" ID="RememberMe" />
-                                <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
-                        </div>
+                    <div class="col-xs-4">
+                        <asp:Button runat="server" ID="ui_loginBtn" CssClass="btn btn-primary btn-block btn-flat" Text="Sign In" OnClick="LogIn" />
                     </div>
                 </div>
-                <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>
-                </p>
-                <p>
-                    <%-- Enable this once you have account confirmation enabled for password reset functionality
-                    <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>
-                    --%>
-                </p>
-            </section>
-        </div>
-
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
+            </form>
+            <a href="#">I forgot my password</a><br />
+            <a href="register.html" class="text-center">Register a new membership</a>
         </div>
     </div>
-</asp:Content>
+    <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/plugins/iCheck/icheck.min.js"></script>
+    <script src="../js/Account/Account.Login.js"></script>
+</body>
+</html>

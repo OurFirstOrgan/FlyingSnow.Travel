@@ -1,41 +1,32 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.Owin;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Owin;
-using FlyingSnow.Web.Models;
-//using System.Web.Http;
+using System.Web.UI.WebControls;
 
 namespace FlyingSnow.Web.Account
 {
-    public partial class Login : Page
+    public partial class Login : System.Web.UI.Page
     {
-        //[AllowAnonymous]
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
-            // Enable this once you have account confirmation enabled for password reset functionality
-            //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
-            OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
-            var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
-            {
-                RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
+
         }
 
         protected void LogIn(object sender, EventArgs e)
         {
+            string username = ui_usernameInput.Text;
+            string password = ui_passwordInput.Text;
+            bool rembered = ui_rememberCheck.Checked;
             if (IsValid)
             {
-                // Validate the user password
+                //Validate the user password
                 var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
 
-                // This doen't count login failures towards account lockout
-                // To enable password failures to trigger lockout, change to shouldLockout: true
-                var result = signinManager.PasswordSignIn(Username.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
+                var result = signinManager.PasswordSignIn(username, password, rembered, shouldLockout: false);
 
                 switch (result)
                 {
@@ -44,12 +35,6 @@ namespace FlyingSnow.Web.Account
                         break;
                     case SignInStatus.LockedOut:
                         Response.Redirect("/Account/Lockout");
-                        break;
-                    case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}",
-                                                        Request.QueryString["ReturnUrl"],
-                                                        RememberMe.Checked),
-                                          true);
                         break;
                     case SignInStatus.Failure:
                     default:

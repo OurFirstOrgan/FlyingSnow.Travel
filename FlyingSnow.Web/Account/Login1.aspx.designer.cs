@@ -10,16 +10,7 @@
 namespace FlyingSnow.Web.Account {
     
     
-    public partial class Login {
-        
-        /// <summary>
-        /// ui_loginForm control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm ui_loginForm;
+    public partial class Login1 {
         
         /// <summary>
         /// ErrorMessage control.
@@ -40,39 +31,48 @@ namespace FlyingSnow.Web.Account {
         protected global::System.Web.UI.WebControls.Literal FailureText;
         
         /// <summary>
-        /// ui_usernameInput control.
+        /// Username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ui_usernameInput;
+        protected global::System.Web.UI.WebControls.TextBox Username;
         
         /// <summary>
-        /// ui_passwordInput control.
+        /// Password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ui_passwordInput;
+        protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
-        /// ui_rememberCheck control.
+        /// RememberMe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ui_rememberCheck;
+        protected global::System.Web.UI.WebControls.CheckBox RememberMe;
         
         /// <summary>
-        /// ui_loginBtn control.
+        /// RegisterHyperLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ui_loginBtn;
+        protected global::System.Web.UI.WebControls.HyperLink RegisterHyperLink;
+        
+        /// <summary>
+        /// OpenAuthLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::FlyingSnow.Web.Account.OpenAuthProviders OpenAuthLogin;
     }
 }
