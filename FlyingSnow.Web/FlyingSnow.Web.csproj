@@ -363,6 +363,7 @@
     <Content Include="js\Pages\Page.AgenciesTable.js" />
     <Content Include="js\Pages\Page.AgencyForm.js" />
     <Content Include="js\Pages\Page.TravelItemForm.js" />
+    <Content Include="js\Pages\Page.TravelItemTable.js" />
     <Content Include="js\plugins\bootstrap-slider\bootstrap-slider.js" />
     <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="js\plugins\bootstrap-wysihtml5\bootstrap3-wysihtml5.js" />
@@ -657,6 +658,7 @@
     <Content Include="js\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="js\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="js\SignalR\SignalRAgency.js" />
+    <Content Include="js\SignalR\SignalRTravelItem.js" />
     <Content Include="packages.config" />
     <Content Include="Account\Web.config" />
     <Content Include="css\iCheck\.DS_Store" />
@@ -692,8 +694,7 @@
     <Content Include="Pages\Forms\AgencyForm.aspx" />
     <Content Include="Pages\Forms\TravelItemForm.aspx" />
     <Content Include="Pages\Table\AgenciesTable.aspx" />
-    <Content Include="Pages\Table\data.html" />
-    <Content Include="Pages\Table\simple.html" />
+    <Content Include="Pages\Table\TravelItemsTable.aspx" />
     <Content Include="Pages\TravelItemPage.aspx" />
     <Content Include="Pages\TravelItemsManager.aspx" />
     <Content Include="js\jquery-1.10.2.min.js" />
@@ -705,6 +706,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
+    <Content Include="Logic\FileHandler.ashx" />
     <None Include="Project_Readme.html" />
     <Content Include="Site.Mobile.Master" />
     <None Include="Web.Debug.config">
@@ -840,6 +842,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Logic\FileHandler.ashx.cs">
+      <DependentUpon>FileHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Pages\AgencyConfirmation.aspx.cs">
@@ -898,6 +903,13 @@
     <Compile Include="Pages\Table\AgenciesTable.aspx.designer.cs">
       <DependentUpon>AgenciesTable.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Table\TravelItemsTable.aspx.cs">
+      <DependentUpon>TravelItemsTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Table\TravelItemsTable.aspx.designer.cs">
+      <DependentUpon>TravelItemsTable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\TravelItemPage.aspx.cs">
       <DependentUpon>TravelItemPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -913,7 +925,8 @@
       <DependentUpon>TravelItemsManager.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignalR\Agency.cs" />
+    <Compile Include="SignalR\SAgency.cs" />
+    <Compile Include="SignalR\SItem.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

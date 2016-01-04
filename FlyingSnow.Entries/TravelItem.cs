@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace FlyingSnow.Entries
 {
-    public class TravelItem
+    public class TravelItem : EntryBase
     {
-        [Key]
-        public int Id { get; set; }
-        public Guid ItemGuid { get; set; }
         public string CustomerName { get; set; }
         public string CustomerPhone1 { get; set; }
         public string CustomerPhone2 { get; set; }
@@ -27,7 +24,7 @@ namespace FlyingSnow.Entries
         public double TotalPrice { get; set; }
         public double InsteadReceive { get; set; }
 
-        public virtual List<TravelPeoples> Peoples { get; set; }
+        public virtual List<TravelPeople> Peoples { get; set; }
 
         public virtual TravelAgency Agency { get; set; }
 

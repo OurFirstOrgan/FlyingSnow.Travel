@@ -62,10 +62,10 @@ namespace FlyingSnow.Web.Pages
             item.TravelDate = this.TravelDate.SelectedDate;
             item.CreateDate = DateTime.Now;
             item.ContactName = this.ContactName.Text;
-            item.Peoples = new TravelPeoples();
-            item.Peoples.Adult = Convert.ToInt32(this.AdultCount.Text);
-            item.Peoples.Child = Convert.ToInt32(this.ChildCount.Text);
-            item.Peoples.Escort = Convert.ToInt32(this.EscortCount.Text);
+            //item.Peoples = new TravelPeoples();
+            //item.Peoples.Adult = Convert.ToInt32(this.AdultCount.Text);
+            //item.Peoples.Child = Convert.ToInt32(this.ChildCount.Text);
+            //item.Peoples.Escort = Convert.ToInt32(this.EscortCount.Text);
             item.Introducer = this.Introducer.Text;
             item.Destination = this.Destination.Text;
             item.GroupType = this.GroupType.Text;

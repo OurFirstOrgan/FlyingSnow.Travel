@@ -8,11 +8,8 @@ using System.Threading.Tasks;
 
 namespace FlyingSnow.Entries
 {
-    public class TravelAgency
+    public class TravelAgency : EntryBase
     {
-        [Key]
-        public int Id { get; set; }
-        public Guid AgencyGuid { get; set; }
         [Required]
         public string AgencyCode { get; set; }
         public string AgencyName { get; set; }
@@ -23,9 +20,6 @@ namespace FlyingSnow.Entries
         public string AgencyAddress { get; set; }
         public string Note { get; set; }
         public virtual List<TravelContact> AgencyContacts { get; set; }
-        public string CreateBy { get; set; }
-        public string LastUpdateBy { get; set; }
-        public DateTime LastUpdateTime { get; set; }
         //public List<string> AgencyPhonesList { get; set; }
         //public string AgencyPhones
         //{

@@ -18,6 +18,6 @@ namespace FlyingSnow.Database
         public DbSet<TravelAgency> TravelAgencies { get; set; }
         public DbSet<TravelContact> TravelContacts { get; set; }
         public DbSet<TravelItem> TravelItems { get; set; }
-        public DbSet<TravelPeoples> TravelPeoples { get; set; }
+        public DbSet<TravelPeople> TravelPeoples { get; set; }
     }
 }

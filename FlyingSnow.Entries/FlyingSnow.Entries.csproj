@@ -50,10 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntryBase.cs" />
     <Compile Include="TravelContact.cs" />
     <Compile Include="Expenditure.cs" />
     <Compile Include="TravelItem.cs" />
-    <Compile Include="TravelPeoples.cs" />
+    <Compile Include="TravelPeople.cs" />
     <Compile Include="TravelAgency.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -28,6 +28,33 @@ namespace FlyingSnow.Controls
             return results;
         }
 
+        public List<TravelItem> GetTravelItemsByDate(DateTime start, DateTime end)
+        {
+            List<TravelItem> results = null;
+            try
+            {
+                using (var db = new EntryContext())
+                {
+                    var query = from i in db.TravelItems
+                                .Include("Peoples")
+                                .Include("Agency")
+                                .Include("Agency.AgencyContacts")
+                                .Include("Operator")
+                                .Include("Operator.AgencyContacts")
+                                .Include("Contact")
+                                .Include("Expenditure")
+                                where i.CreateDate >= start && i.CreateDate <= end
+                                select i;
+                    results = query.ToList<TravelItem>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logs.Error("GetTravelItemsByDate Exception:" + ex.ToString());
+            }
+            return results;
+        }
+
         public TravelItem GetTravelItemByItemGuid(Guid guid)
         {
             TravelItem result = null;
@@ -36,7 +63,7 @@ namespace FlyingSnow.Controls
                 using (var db = new EntryContext())
                 {
                     var query = from i in db.TravelItems.Include("Agency").Include("Peoples")
-                                //a in db.TravelAgencies on i.Agency equals a
+                                    //a in db.TravelAgencies on i.Agency equals a
                                 where i.ItemGuid == guid
                                 select i;
                     result = query.FirstOrDefault();
@@ -63,7 +90,6 @@ namespace FlyingSnow.Controls
                                     ItemGuid = i.ItemGuid,
                                     TravelDate = i.TravelDate,
                                     ContactName = i.ContactName,
-                                    PeoplesCount = i.Peoples.Total,
                                     Agency = i.Agency.AgencyName,
                                     Introducer = i.Introducer,
                                     Destination = i.Destination,

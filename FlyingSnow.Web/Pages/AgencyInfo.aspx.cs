@@ -38,7 +38,7 @@ namespace FlyingSnow.Web.Pages
             GetAgencyControl();
 
             TravelAgency agency = new TravelAgency();
-            agency.AgencyGuid = Guid.NewGuid();
+            agency.ItemGuid = Guid.NewGuid();
 #if  true
             agency.AgencyCode = this.AgencyCode.Text;
             agency.AgencyName = this.AgencyName.Text;
@@ -77,7 +77,7 @@ namespace FlyingSnow.Web.Pages
             GetAgencyControl();
             TravelAgency agency = new TravelAgency();
             agency.Id = Convert.ToInt32(this.HideId.Text);
-            agency.AgencyGuid = new Guid(this.HideGuid.Text);
+            agency.ItemGuid = new Guid(this.HideGuid.Text);
             agency.AgencyCode = this.AgencyCode.Text;
             agency.AgencyName = this.AgencyName.Text;
             //agency.AgencyPhonesList = new List<string>();
@@ -103,7 +103,7 @@ namespace FlyingSnow.Web.Pages
         private void BindData(TravelAgency agency)
         {
             this.HideId.Text = agency.Id.ToString();
-            this.HideGuid.Text = agency.AgencyGuid.ToString();
+            this.HideGuid.Text = agency.ItemGuid.ToString();
             this.AgencyCode.Text = agency.AgencyCode;
             this.AgencyName.Text = agency.AgencyName;
             this.AgencyPhone.Text = agency.AgencyPrincipalPhone;

@@ -58,10 +58,10 @@ namespace FlyingSnow.Controls
                     {
                         case "Code":
                         case "code":
-                            results = db.TravelAgencies.Where(a => a.AgencyCode.Equals(value.ToString(), StringComparison.CurrentCultureIgnoreCase)).ToList();
+                            results = db.TravelAgencies.Include("AgencyContacts").Where(a => a.AgencyCode.Contains(value.ToString().ToLower())).ToList();
                             break;
                         case "name":
-                            results = db.TravelAgencies.Where(a => a.AgencyName.Contains(value.ToString())).ToList();
+                            results = db.TravelAgencies.Include("AgencyContacts").Where(a => a.AgencyName.Contains(value.ToString())).ToList();
                             break;
                         default:
                             break;
@@ -148,7 +148,7 @@ namespace FlyingSnow.Controls
                 using (var db = new EntryContext())
                 {
                     var item = from a in db.TravelAgencies
-                               where a.AgencyGuid == guid
+                               where a.ItemGuid == guid
                                select a;
                     db.TravelAgencies.Remove(item.FirstOrDefault());
                     db.SaveChanges();

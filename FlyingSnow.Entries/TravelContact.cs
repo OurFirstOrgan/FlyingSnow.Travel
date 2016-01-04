@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace FlyingSnow.Entries
 {
-    public class TravelContact
+    public class TravelContact : EntryBase
     {
-        [Key]
-        public int ContactId { get; set; }
-        public Guid ContactGuid { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string QQ { get; set; }

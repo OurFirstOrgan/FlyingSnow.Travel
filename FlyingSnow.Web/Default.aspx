@@ -24,7 +24,7 @@
                 <ul class="sidebar-menu">
                     <li class="active">
                         <a href="index.html">
-                            <i class="fa fa-dashboard"></i><span>仪表盘</span>
+                            <i class="fa fa-dashboard"></i><span>首页</span>
                         </a>
                     </li>
                     <li>
@@ -135,7 +135,7 @@
                         <div class="small-box bg-aqua">
                             <div class="inner">
                                 <h3>150
-                                    </h3>
+                                </h3>
                                 <p>
                                     New Orders
                                    
@@ -173,7 +173,7 @@
                         <div class="small-box bg-yellow">
                             <div class="inner">
                                 <h3>44
-                                    </h3>
+                                </h3>
                                 <p>
                                     User Registrations
                                    
@@ -192,7 +192,7 @@
                         <div class="small-box bg-red">
                             <div class="inner">
                                 <h3>65
-                                    </h3>
+                                </h3>
                                 <p>
                                     Unique Visitors
                                    
@@ -403,7 +403,7 @@
 
                                 <i class="fa fa-map-marker"></i>
                                 <h3 class="box-title">Visitors
-                                    </h3>
+                                </h3>
                             </div>
                             <div class="box-body no-padding">
                                 <div id="world-map" style="height: 300px;"></div>
@@ -495,7 +495,7 @@
                                         <a href="#" class="name">
                                             <small class="text-muted pull-right"><i class="fa fa-clock-o"></i>2:15</small>
                                             Mike Doe
-                                            </a>
+                                        </a>
                                         I would like to meet you to discuss the latest news about
                                             the arrival of the new theme. They say it is going to be one the
                                             best themes on the market
@@ -521,7 +521,7 @@
                                         <a href="#" class="name">
                                             <small class="text-muted pull-right"><i class="fa fa-clock-o"></i>5:15</small>
                                             Jane Doe
-                                            </a>
+                                        </a>
                                         I would like to meet you to discuss the latest news about
                                             the arrival of the new theme. They say it is going to be one the
                                             best themes on the market
@@ -536,7 +536,7 @@
                                         <a href="#" class="name">
                                             <small class="text-muted pull-right"><i class="fa fa-clock-o"></i>5:30</small>
                                             Susan Doe
-                                            </a>
+                                        </a>
                                         I would like to meet you to discuss the latest news about
                                             the arrival of the new theme. They say it is going to be one the
                                             best themes on the market

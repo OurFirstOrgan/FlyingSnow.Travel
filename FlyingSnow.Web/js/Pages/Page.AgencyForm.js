@@ -14,7 +14,7 @@ function CreateAgency() {
 
 function AssemblyAgency() {
     var agency = {};
-    agency.AgencyCode = $("#ui_agencyCode").val();
+    agency.AgencyCode = $("#ui_agencyCode").val().toLowerCase();
     agency.AgencyName = $("#ui_agencyName").val();
     agency.AgencyPrincipal = $("#ui_agencyPrincipal").val();
     agency.AgencyPrincipalPhone = $("#ui_agencyPrincipalPhone").val();

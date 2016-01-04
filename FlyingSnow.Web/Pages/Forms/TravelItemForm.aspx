@@ -138,7 +138,7 @@
                                         <input type="text" class="form-control" id="ui_customerName" placeholder="客人姓名">
                                     </div>
                                     <div class="form-group">
-                                        <label for="ui_customerName1">客人电话</label>
+                                        <label for="ui_customerPhone1">客人电话</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-phone"></i>
@@ -267,13 +267,29 @@
                                         <div class="input-group">
                                             <input type="text" id="ui_agencyInput" name="q" class="form-control" placeholder="搜索..." />
                                             <span class="input-group-btn">
-                                                <button type='submit' name='seach' id='ui_agencyBtn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                                                <button type='submit' name='seach' id='ui_agencySearchBtn' class="btn btn-flat" data-bind="click: searchAgencyClick"><i class="fa fa-search"></i></button>
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <%-- insert agency information --%>
+                                    <div id="ui_agencySelectDiv" class="form-group" data-bind="visible: needShowAgency">
+                                        <select class="form-control select2" style="width: 100%;" data-bind="options: optionAgencys, optionsText: 'AgencyName', value: selectedAgency">
+                                        </select>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-bind="visible: needShowAgency">
+                            <div class="box box-default">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-text-width"></i>
+                                    <h3 class="box-title">旅行社信息</h3>
+                                </div>
+                                <div class="box-body">
+                                    <h4>名  称:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyName : ''"></span></h4>
+                                    <h4>确认人:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyPrincipal : ''"></span></h4>
+                                    <h4>负责人电话:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyPrincipalPhone : ''"></span></h4>
+                                    <h4>传真:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyFax : ''"></span></h4>
+                                    <h4>地址:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyAddress : ''"></span></h4>
                                 </div>
                             </div>
                         </div>
@@ -377,13 +393,29 @@
                                         <div class="input-group">
                                             <input type="text" id="ui_operatorInput" name="q" class="form-control" placeholder="搜索..." />
                                             <span class="input-group-btn">
-                                                <button type='submit' name='seach' id='ui_operatorBtn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+                                                <button type='submit' name='seach' id='ui_operatorBtn' class="btn btn-flat" data-bind="click: searchOperatorClick"><i class="fa fa-search"></i></button>
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <%-- insert agency information --%>
+                                    <div id="ui_operatorSelectDiv" class="form-group" data-bind="visible: needShowOperator">
+                                        <select class="form-control select2" style="width: 100%;" data-bind="options: optionOperators, optionsText: 'AgencyName', value: selectedOperator">
+                                        </select>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-bind="visible: needShowOperator">
+                            <div class="box box-default">
+                                <div class="box-header with-border">
+                                    <i class="fa fa-text-width"></i>
+                                    <h3 class="box-title">旅行社信息</h3>
+                                </div>
+                                <div class="box-body">
+                                    <h4>名  称:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyName : ''"></span></h4>
+                                    <h4>确认人:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyPrincipal : ''"></span></h4>
+                                    <h4>负责人电话:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyPrincipalPhone : ''"></span></h4>
+                                    <h4>传真:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyFax : ''"></span></h4>
+                                    <h4>地址:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyAddress : ''"></span></h4>
                                 </div>
                             </div>
                         </div>
@@ -503,7 +535,7 @@
                         </div>
                     </div>
                     <div class="box-footer">
-                        <button id="ui_itemButton" type="button" class="btn btn-primary">提交</button>
+                        <button id="ui_itemButton" type="button" class="btn btn-primary" data-bind="click: SubmitBtnClick">提交</button>
                     </div>
                 </div>
             </section>
@@ -515,8 +547,9 @@
     <script src="../../js/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
     <script src="../../js/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
     <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="../../js/knockout-3.3.0.js" type="text/javascript"></script>
     <script src="../../js/jquery.signalR-2.2.0.min.js"></script>
     <script src="/signalr/hubs"></script>
-    <script src="../../js/SignalR/SignalRAgency.js"></script>
+    <script src="../../js/SignalR/SignalRTravelItem.js"></script>
     <script src="../../js/Pages/Page.TravelItemForm.js" type="text/javascript"></script>
 </asp:Content>
