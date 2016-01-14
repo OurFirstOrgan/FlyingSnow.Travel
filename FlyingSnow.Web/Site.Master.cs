@@ -77,10 +77,25 @@ namespace FlyingSnow.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (HttpContext.Current.User.IsInRole("administrator") || true)
-            //{
-            //    adminLink.Visible = true;
-            //}
+            var user = HttpContext.Current.User
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                if (HttpContext.Current.User.IsInRole("administrator"))
+                {
+                    var userId = HttpContext.Current.User.Identity.GetUserId();
+                }
+                else if (HttpContext.Current.User.IsInRole("member"))
+                {
+                }
+                else
+                {
+                }
+                //HttpContext.Current.User.IsInRole("administrator");
+            }
+            else
+            {
+                IdentityHelper.RedirectToReturnUrl("/Account/Login.aspx", Response);
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

@@ -43,7 +43,7 @@
                     <div class="col-xs-8">
                         <div class="checkbox icheck">
                             <label>
-                                <asp:CheckBox ID="ui_rememberCheck" runat="server" />
+                                <asp:CheckBox ID="ui_rememberCBox" runat="server" />
                                 Remember Me
                             </label>
                         </div>

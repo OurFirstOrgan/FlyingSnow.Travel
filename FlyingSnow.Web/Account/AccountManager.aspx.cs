@@ -15,7 +15,7 @@ namespace FlyingSnow.Web.Account
         {
             if (!IsPostBack)
             {
-                BindData();
+                //BindData();
             }
         }
 

@@ -65,7 +65,12 @@ $(function () {
             confirm: _confirm
         }
     }();
+    ko.applyBindings(UserModel);
 });
+
+var UserModel = {
+    username: ko.observable("abc")
+}
 
 function AndyAlert(options) {
     AndyModal.alert(options);

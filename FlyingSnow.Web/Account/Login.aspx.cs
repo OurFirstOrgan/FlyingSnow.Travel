@@ -19,7 +19,7 @@ namespace FlyingSnow.Web.Account
         {
             string username = ui_usernameInput.Text;
             string password = ui_passwordInput.Text;
-            bool rembered = ui_rememberCheck.Checked;
+            bool rembered = ui_rememberCBox.Checked;
             if (IsValid)
             {
                 //Validate the user password

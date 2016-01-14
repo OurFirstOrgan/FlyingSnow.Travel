@@ -29,6 +29,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -349,17 +350,47 @@
     <Content Include="css\jQueryUI\jquery-ui-1.10.3.custom.min.css" />
     <Content Include="css\jvectormap\jquery-jvectormap-1.2.2.css" />
     <Content Include="css\morris\morris.css" />
+    <Content Include="css\skins\skin-black-light.css" />
+    <Content Include="css\skins\skin-black-light.min.css" />
+    <Content Include="css\skins\skin-black.css" />
+    <Content Include="css\skins\skin-black.min.css" />
+    <Content Include="css\skins\skin-blue-light.css" />
+    <Content Include="css\skins\skin-blue-light.min.css" />
+    <Content Include="css\skins\skin-blue.css" />
+    <Content Include="css\skins\skin-blue.min.css" />
+    <Content Include="css\skins\skin-green-light.css" />
+    <Content Include="css\skins\skin-green-light.min.css" />
+    <Content Include="css\skins\skin-green.css" />
+    <Content Include="css\skins\skin-green.min.css" />
+    <Content Include="css\skins\skin-purple-light.css" />
+    <Content Include="css\skins\skin-purple-light.min.css" />
+    <Content Include="css\skins\skin-purple.css" />
+    <Content Include="css\skins\skin-purple.min.css" />
+    <Content Include="css\skins\skin-red-light.css" />
+    <Content Include="css\skins\skin-red-light.min.css" />
+    <Content Include="css\skins\skin-red.css" />
+    <Content Include="css\skins\skin-red.min.css" />
+    <Content Include="css\skins\skin-yellow-light.css" />
+    <Content Include="css\skins\skin-yellow-light.min.css" />
+    <Content Include="css\skins\skin-yellow.css" />
+    <Content Include="css\skins\skin-yellow.min.css" />
+    <Content Include="css\skins\_all-skins.css" />
+    <Content Include="css\skins\_all-skins.min.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\ionicons.svg" />
+    <Content Include="img\user\user2-160x160.jpg" />
     <Content Include="js\Account\Account.Login.js" />
     <Content Include="js\AdminLTE\app.js" />
     <Content Include="js\AdminLTE\dashboard.js" />
+    <Content Include="js\app.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\common.js" />
+    <Content Include="js\demo.js" />
+    <Content Include="js\jQuery-2.1.4.min.js" />
     <Content Include="js\jquery-ui-1.10.3.js" />
     <Content Include="js\jquery-ui-1.10.3.min.js" />
     <Content Include="js\knockout-3.3.0.js" />
@@ -599,6 +630,8 @@
     <Content Include="js\plugins\datatables\dataTables.bootstrap.js" />
     <Content Include="js\plugins\datatables\jquery.dataTables.js" />
     <Content Include="js\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="js\plugins\fastclick\fastclick.js" />
+    <Content Include="js\plugins\fastclick\fastclick.min.js" />
     <Content Include="js\plugins\flot\excanvas.js" />
     <Content Include="js\plugins\flot\excanvas.min.js" />
     <Content Include="js\plugins\flot\jquery.colorhelpers.js" />

@@ -10,7 +10,7 @@
 namespace FlyingSnow.Web.Account {
     
     
-    public partial class Register {
+    public partial class Register1 {
         
         /// <summary>
         /// ErrorMessage control.

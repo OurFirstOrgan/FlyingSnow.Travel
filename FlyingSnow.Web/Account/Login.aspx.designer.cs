@@ -58,13 +58,13 @@ namespace FlyingSnow.Web.Account {
         protected global::System.Web.UI.WebControls.TextBox ui_passwordInput;
         
         /// <summary>
-        /// ui_rememberCheck control.
+        /// ui_rememberCBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox ui_rememberCheck;
+        protected global::System.Web.UI.WebControls.CheckBox ui_rememberCBox;
         
         /// <summary>
         /// ui_loginBtn control.
