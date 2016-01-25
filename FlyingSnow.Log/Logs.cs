@@ -10,7 +10,7 @@ namespace FlyingSnow.Log
     public class Logs
     {
         private static LogsInstance a_logsInstance { get; set; }
-        private static readonly string productName = "Wechat";
+        private static readonly string productName = "Travel";
         private static bool isLog4net = true;
 
         static Logs()

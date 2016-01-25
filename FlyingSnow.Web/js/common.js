@@ -65,7 +65,7 @@ $(function () {
             confirm: _confirm
         }
     }();
-    ko.applyBindings(UserModel);
+    //ko.applyBindings(UserModel);
 });
 
 var UserModel = {

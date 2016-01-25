@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FlyingSnow.Controls;
+using FlyingSnow.Entries;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
@@ -9,11 +12,12 @@ using System.Web.UI.WebControls;
 
 namespace FlyingSnow.Web
 {
-    public partial class SiteMaster : MasterPage
+    public partial class SiteMaster : MasterPage, ICallbackEventHandler
     {
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+        string a_result;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -77,19 +81,25 @@ namespace FlyingSnow.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var user = HttpContext.Current.User
-            if (HttpContext.Current.User.Identity.IsAuthenticated)
+            var user = HttpContext.Current.User;
+            //var inrole = HttpContext.Current.User.IsInRole("administrator"); 
+            if (HttpContext.Current.User.Identity.IsAuthenticated || true)
             {
-                if (HttpContext.Current.User.IsInRole("administrator"))
+                if (!Page.IsPostBack)
                 {
-                    var userId = HttpContext.Current.User.Identity.GetUserId();
+                    LoadAgenciesTablePageAjax();
+                    LoadTravelItemsTablePageAjax();
                 }
-                else if (HttpContext.Current.User.IsInRole("member"))
-                {
-                }
-                else
-                {
-                }
+                //if (HttpContext.Current.User.IsInRole("administrator"))
+                //{
+                //    //var userId = HttpContext.Current.User.Identity.GetUserId();
+                //}
+                //else if (HttpContext.Current.User.IsInRole("member"))
+                //{
+                //}
+                //else
+                //{
+                //}
                 //HttpContext.Current.User.IsInRole("administrator");
             }
             else
@@ -101,6 +111,58 @@ namespace FlyingSnow.Web
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut();
+        }
+
+        #region Ajax
+        public void LoadAgenciesTablePageAjax()
+        {
+            ClientScriptManager csm = Page.ClientScript;
+            string reference = csm.GetCallbackEventReference(this, "args", "LoadAgenciesTablePageAjaxSuccess", "", "LoadAgenciesTablePageAjaxError", false);
+            string callbackScript = "function CallAgenciesTablePageAjax(args, context) {\n" +
+               reference + ";\n }";
+            csm.RegisterClientScriptBlock(this.GetType(), "CallAgenciesTablePageAjax", callbackScript, true);
+        }
+
+        public void LoadTravelItemsTablePageAjax()
+        {
+            ClientScriptManager csm = Page.ClientScript;
+            string reference = csm.GetCallbackEventReference(this, "args", "LoadTravelItemsTablePageAjaxSuccess", "", "LoadTravelItemsTablePageAjaxError", false);
+            string callbackScript = "function CallTravelItemsTablePageAjax(args, context) {\n" +
+               reference + ";\n }";
+            csm.RegisterClientScriptBlock(this.GetType(), "CallTravelItemsTablePageAjax", callbackScript, true);
+        }
+        #endregion
+
+        private void GetAgenciesByFilter(string paraStr)
+        {
+            AgencyControl _agencyControl = new AgencyControl();
+            if (string.IsNullOrEmpty(paraStr))
+            {
+                List<TravelAgency> _agencies = _agencyControl.GetAllAgencies();
+                a_result = JsonConvert.SerializeObject(new { Agencies = _agencies });
+            }
+            else
+            {
+            }
+        }
+
+        public void RaiseCallbackEvent(string eventArgument)
+        {
+            string flag = eventArgument.Substring(0, 36);
+            string paraStr = eventArgument.Substring(36);
+            switch (flag)
+            {
+                case "7785411B-DF71-4AFE-98C9-FB9EB2953D89":
+                    GetAgenciesByFilter(paraStr);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public string GetCallbackResult()
+        {
+            return a_result;
         }
     }
 
