@@ -230,9 +230,7 @@
             </section>
         </aside>
     </div>
-    <script type="text/javascript">
-        var PageInfo = <% =a_result %>;
-    </script>
+
     <script src="../../js/jquery-1.10.2.min.js" type="text/javascript"></script>
     <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
     <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>

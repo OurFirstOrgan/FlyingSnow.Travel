@@ -5,7 +5,7 @@
     operators: []
 };
 $(function () {
-    SRJoinGroup("123");
+    //SRJoinGroup("123");
     $("#datemask").inputmask("yyyy/mm/dd", { "placeholder": "yyyy/mm/dd" });
 
     $("[data-mask]").inputmask();
@@ -18,18 +18,18 @@ $(function () {
         EarnestSubtotal();
     });
 
-    ko.applyBindings(TravelItemViewModel);
+    //ko.applyBindings(TravelItemViewModel);
 });
 
-
-var TravelItemViewModel = {
-    needShowAgency: ko.observable(false),
-    selectedAgency: ko.observable(PageInfo.selectedAgency),
-    optionAgencys: ko.observable(PageInfo.agencys),
-    needShowOperator: ko.observable(false),
-    selectedOperator: ko.observable(PageInfo.selectedOperator),
-    optionOperators: ko.observable(PageInfo.operators)
-}
+var TravelItemViewModel = {}
+//var TravelItemViewModel = {
+//    needShowAgency: ko.observable(false),
+//    selectedAgency: ko.observable(PageInfo.selectedAgency),
+//    optionAgencys: ko.observable(PageInfo.agencys),
+//    needShowOperator: ko.observable(false),
+//    selectedOperator: ko.observable(PageInfo.selectedOperator),
+//    optionOperators: ko.observable(PageInfo.operators)
+//}
 
 TravelItemViewModel.searchAgencyClick = function () {
     var inputInfo = $("#ui_agencyInput").val();

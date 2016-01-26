@@ -1,555 +1,433 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="TravelItemForm.aspx.cs" Inherits="FlyingSnow.Web.Pages.Forms.TravelItemForm" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="wrapper row-offcanvas row-offcanvas-left">
-        <!-- Left side column. contains the logo and sidebar -->
-        <aside class="left-side sidebar-offcanvas">
-            <section class="sidebar">
-                <div class="user-panel">
-                    <div class="pull-left image">
-                        <img src="../../img/avatar3.png" class="img-circle" alt="User Image" />
-                    </div>
-                    <div class="pull-left info">
-                        <p>Hello, Jane</p>
-                        <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
-                    </div>
-                </div>
-                <form action="#" method="get" class="sidebar-form">
-                    <div class="input-group">
-                        <input type="text" name="q" class="form-control" placeholder="Search..." />
-                        <span class="input-group-btn">
-                            <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
-                </form>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="../../index.html">
-                            <i class="fa fa-dashboard"></i><span>仪表盘</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../widgets.html">
-                            <i class="fa fa-th"></i><span>Widgets</span> <small class="badge pull-right bg-green">new</small>
-                        </a>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-bar-chart-o"></i>
-                            <span>Charts</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="../charts/morris.html"><i class="fa fa-angle-double-right"></i>Morris</a></li>
-                            <li><a href="../charts/flot.html"><i class="fa fa-angle-double-right"></i>Flot</a></li>
-                            <li><a href="../charts/inline.html"><i class="fa fa-angle-double-right"></i>Inline charts</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-laptop"></i>
-                            <span>UI Elements</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="../UI/general.html"><i class="fa fa-angle-double-right"></i>General</a></li>
-                            <li><a href="../UI/icons.html"><i class="fa fa-angle-double-right"></i>Icons</a></li>
-                            <li><a href="../UI/buttons.html"><i class="fa fa-angle-double-right"></i>Buttons</a></li>
-                            <li><a href="../UI/sliders.html"><i class="fa fa-angle-double-right"></i>Sliders</a></li>
-                            <li><a href="../UI/timeline.html"><i class="fa fa-angle-double-right"></i>Timeline</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview active">
-                        <a href="#">
-                            <i class="fa fa-edit"></i><span>表单</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="/Pages/Forms/AgencyForm.aspx"><i class="fa fa-angle-double-right"></i>旅行社表单</a></li>
-                            <li class="active"><a href="/Pages/Forms/TravelItemForm.aspx"><i class="fa fa-angle-double-right"></i>订单表单</a></li>
-                            <li><a href="editors.html"><i class="fa fa-angle-double-right"></i>Editors</a></li>
-                        </ul>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-table"></i><span>Tables</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="../tables/simple.html"><i class="fa fa-angle-double-right"></i>Simple tables</a></li>
-                            <li><a href="../tables/data.html"><i class="fa fa-angle-double-right"></i>Data tables</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="../calendar.html">
-                            <i class="fa fa-calendar"></i><span>Calendar</span>
-                            <small class="badge pull-right bg-red">3</small>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../mailbox.html">
-                            <i class="fa fa-envelope"></i><span>Mailbox</span>
-                            <small class="badge pull-right bg-yellow">12</small>
-                        </a>
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-folder"></i><span>Examples</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li><a href="../examples/invoice.html"><i class="fa fa-angle-double-right"></i>Invoice</a></li>
-                            <li><a href="../examples/login.html"><i class="fa fa-angle-double-right"></i>Login</a></li>
-                            <li><a href="../examples/register.html"><i class="fa fa-angle-double-right"></i>Register</a></li>
-                            <li><a href="../examples/lockscreen.html"><i class="fa fa-angle-double-right"></i>Lockscreen</a></li>
-                            <li><a href="../examples/404.html"><i class="fa fa-angle-double-right"></i>404 Error</a></li>
-                            <li><a href="../examples/500.html"><i class="fa fa-angle-double-right"></i>500 Error</a></li>
-                            <li><a href="../examples/blank.html"><i class="fa fa-angle-double-right"></i>Blank Page</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <!-- /.sidebar -->
-        </aside>
-
-        <!-- Right side column. Contains the navbar and content of the page -->
-        <aside class="right-side">
-            <section class="content-header">
-                <h1>订单表单
+    <aside class="right-side">
+        <section class="content-header">
+            <h1>订单表单
                     <small>预览</small>
-                </h1>
-                <ol class="breadcrumb">
-                    <li><a href="/Default"><i class="fa fa-dashboard"></i>主页</a></li>
-                    <li><a href="#">表单</a></li>
-                    <li class="active">订单表单</li>
-                </ol>
-            </section>
-            <section class="content">
-                <div class="box box-primary">
-                    <div class="box-header">
-                        <h3 class="box-title">订单</h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box box-default">
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="ui_customerName">客人姓名</label>
-                                        <input type="text" class="form-control" id="ui_customerName" placeholder="客人姓名">
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="/Default"><i class="fa fa-dashboard"></i>主页</a></li>
+                <li><a href="#">表单</a></li>
+                <li class="active">订单表单</li>
+            </ol>
+        </section>
+        <section class="content">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">订单</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-default">
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="ui_customerName">客人姓名</label>
+                                    <asp:TextBox runat="server" ID="ui_customerName" CssClass="form-control" placeholder="客人姓名"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_customerPhone1">客人电话</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <asp:TextBox runat="server" ID="ui_customerPhone1" CssClass="form-control" TextMode="Phone"></asp:TextBox>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="ui_customerPhone1">客人电话</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <asp:TextBox runat="server" ID="ui_customerPhone2" CssClass="form-control" TextMode="Phone"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_travelDate">出发日期</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <asp:TextBox runat="server" ID="ui_travelDate" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_tourRoute">出发线路</label>
+                                    <asp:TextBox runat="server" ID="ui_tourRoute" CssClass="form-control" placeholder="出发路线"></asp:TextBox>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="ui_adultPrice">成人价格</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
-                                                <i class="fa fa-phone"></i>
+                                                <i class="fa fa-cny"></i>
                                             </div>
-                                            <input type="text" class="form-control" id="ui_customerPhone1" data-inputmask='"mask": "999-9999-9999"' data-mask />
+                                            <asp:TextBox runat="server" ID="ui_adultPrice" CssClass="form-control" placeholder="成人价格" TextMode="Number"></asp:TextBox>
                                         </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ui_adultCount">成人人数</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
-                                                <i class="fa fa-phone"></i>
+                                                <i class="fa fa-user"></i>
                                             </div>
-                                            <input type="text" class="form-control" id="ui_customerPhone2" data-inputmask='"mask": "999-9999-9999"' data-mask />
+                                            <asp:TextBox runat="server" ID="ui_adultCount" CssClass="form-control" placeholder="成人人数"></asp:TextBox>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="ui_travelDate">出发日期</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label for="ui_childPrice">儿童价格</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
+                                                <i class="fa fa-cny"></i>
                                             </div>
-                                            <input type="text" class="form-control" id="ui_travelDate" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask />
+                                            <asp:TextBox runat="server" ID="ui_childPrice" CssClass="form-control" placeholder="儿童价格"></asp:TextBox>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="ui_tourRoute">出发线路</label>
-                                        <input type="text" class="form-control" id="ui_tourRoute" placeholder="出发路线">
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="ui_adultPrice">成人价格</label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-cny"></i>
-                                                </div>
-                                                <input type="text" class="form-control" id="ui_adultPrice" placeholder="成人价格" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="ui_adultCount">成人人数</label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-user"></i>
-                                                </div>
-                                                <input type="text" class="form-control" id="ui_adultCount" placeholder="成人人数" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label for="ui_childPrice">儿童价格</label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-cny"></i>
-                                                </div>
-                                                <input type="text" class="form-control" id="ui_childPrice" placeholder="儿童价格" />
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="ui_childCount">儿童人数</label>
-                                            <div class="input-group">
-                                                <div class="input-group-addon">
-                                                    <i class="fa fa-user"></i>
-                                                </div>
-                                                <input type="text" class="form-control" id="ui_childCount" placeholder="儿童人数" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_earnestOther">其他</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-cny"></i></span>
-                                            <input type="text" class="form-control" id="ui_earnestOther" placeholder="其他">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_earnestOtherDes">其他说明</label>
-                                        <input type="text" class="form-control" id="ui_earnestOtherDes" placeholder="其他说明">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_earnestTotal">总价</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-cny"></i></span>
-                                            <input type="text" class="form-control" id="ui_earnestTotal" placeholder="总价">
-                                            <span id="ui_earnestSubtotal" class="input-group-addon"><i class="fa fa-rotate-right"></i></span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_insteadReceive">代收金额</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-cny"></i></span>
-                                            <input type="text" class="form-control" id="ui_insteadReceive" placeholder="代收金额">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="box box-danger">
-                                <div class="box-header">
-                                    <h6 class="box-title">登记信息</h6>
-                                </div>
-                                <div class="box-body" id="ui_customsBox" count="1">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <div class="input-group-addon"><i class="fa fa-male"></i></div>
-                                            <input type="text" class="form-control" id="ui_customerName0" placeholder="客人姓名" />
-                                            <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
-                                            <input type="text" class="form-control" id="ui_customerIdCard0" placeholder="身份证" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="box-footer">
-                                    <button type="submit" class="btn btn-primary" id="ui_addRegistInfo">添加</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box box-default">
-                                <div class="box-header">
-                                    <h4 class="box-title">组团社</h4>
-                                </div>
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="ui_agencyInput">组团社</label>
-                                        <div class="input-group">
-                                            <input type="text" id="ui_agencyInput" name="q" class="form-control" placeholder="搜索..." />
-                                            <span class="input-group-btn">
-                                                <button type='submit' name='seach' id='ui_agencySearchBtn' class="btn btn-flat" data-bind="click: searchAgencyClick"><i class="fa fa-search"></i></button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div id="ui_agencySelectDiv" class="form-group" data-bind="visible: needShowAgency">
-                                        <select class="form-control select2" style="width: 100%;" data-bind="options: optionAgencys, optionsText: 'AgencyName', value: selectedAgency">
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6" data-bind="visible: needShowAgency">
-                            <div class="box box-default">
-                                <div class="box-header with-border">
-                                    <i class="fa fa-text-width"></i>
-                                    <h3 class="box-title">旅行社信息</h3>
-                                </div>
-                                <div class="box-body">
-                                    <h4>名  称:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyName : ''"></span></h4>
-                                    <h4>确认人:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyPrincipal : ''"></span></h4>
-                                    <h4>负责人电话:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyPrincipalPhone : ''"></span></h4>
-                                    <h4>传真:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyFax : ''"></span></h4>
-                                    <h4>地址:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyAddress : ''"></span></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box box-default">
-                                <div class="box-header">
-                                    <h3 class="box-title">去时</h3>
-                                </div>
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="ui_onwardTicket1">去程票价1</label>
-                                        <input type="text" class="form-control" id="ui_onwardTicket1" placeholder="去程票价1" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_onwardServiceCharge1">去程服务费1</label>
-                                        <input type="text" class="form-control" id="ui_onwardServiceCharge1" placeholder="去程服务费1" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_onwardTicket2">去程票价2</label>
-                                        <input type="text" class="form-control" id="ui_onwardTicket2" placeholder="去程票价2" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_onwardServiceCharge2">去程服务费2</label>
-                                        <input type="text" class="form-control" id="ui_onwardServiceCharge2" placeholder="去程服务费2" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="box box-default">
-                                <div class="box-header">
-                                    <h3 class="box-title">回程</h3>
-                                </div>
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="ui_backwardTicket1">回程票价1</label>
-                                        <input type="text" class="form-control" id="ui_backwardTicket1" placeholder="回程票价1" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_backwardServiceCharge1">回程服务费1</label>
-                                        <input type="text" class="form-control" id="ui_backwardServiceCharge1" placeholder="回程服务费1" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_backwardTicket2">回程票价2</label>
-                                        <input type="text" class="form-control" id="ui_backwardTicket2" placeholder="回程票价2" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_backwardServiceCharge2">回程服务费2</label>
-                                        <input type="text" class="form-control" id="ui_backwardServiceCharge2" placeholder="回程服务费2" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box box-default">
-                                <div class="box-header">
-                                    <h3 class="box-title">费用</h3>
-                                </div>
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="ui_seeOffFee">送机费</label>
-                                        <input type="text" class="form-control" id="ui_seeOffFee" placeholder="送机费" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_insuranceFee">保险费</label>
-                                        <input type="text" class="form-control" id="ui_insuranceFee" placeholder="保险费" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_atTimeRefund">现退款</label>
-                                        <input type="text" class="form-control" id="ui_atTimeRefund" placeholder="现退款" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_atTimeAccept">现收款</label>
-                                        <input type="text" class="form-control" id="ui_atTimeAccept" placeholder="现收款" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_otherPrice">其他费</label>
-                                        <input type="text" class="form-control" id="ui_otherPrice" placeholder="其他费" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_otherDescription">其他说明</label>
-                                        <input type="text" class="form-control" id="ui_otherDescription" placeholder="其他说明" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box box-default">
-                                <div class="box-header">
-                                    <h4 class="box-title">地接社</h4>
-                                </div>
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="ui_operatorInput">地接社</label>
-                                        <div class="input-group">
-                                            <input type="text" id="ui_operatorInput" name="q" class="form-control" placeholder="搜索..." />
-                                            <span class="input-group-btn">
-                                                <button type='submit' name='seach' id='ui_operatorBtn' class="btn btn-flat" data-bind="click: searchOperatorClick"><i class="fa fa-search"></i></button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div id="ui_operatorSelectDiv" class="form-group" data-bind="visible: needShowOperator">
-                                        <select class="form-control select2" style="width: 100%;" data-bind="options: optionOperators, optionsText: 'AgencyName', value: selectedOperator">
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6" data-bind="visible: needShowOperator">
-                            <div class="box box-default">
-                                <div class="box-header with-border">
-                                    <i class="fa fa-text-width"></i>
-                                    <h3 class="box-title">旅行社信息</h3>
-                                </div>
-                                <div class="box-body">
-                                    <h4>名  称:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyName : ''"></span></h4>
-                                    <h4>确认人:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyPrincipal : ''"></span></h4>
-                                    <h4>负责人电话:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyPrincipalPhone : ''"></span></h4>
-                                    <h4>传真:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyFax : ''"></span></h4>
-                                    <h4>地址:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyAddress : ''"></span></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="box box-danger">
-                                <div class="box-header">
-                                    <h3 class="box-title">信息</h3>
-                                </div>
-                                <div class="box-body">
-                                    <div class="form-group">
-                                        <label for="ui_arriveDate">抵达日期</label>
+                                    <div class="col-md-6">
+                                        <label for="ui_childCount">儿童人数</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
+                                                <i class="fa fa-user"></i>
                                             </div>
-                                            <input type="text" class="form-control" id="ui_arriveDate" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask />
+                                            <asp:TextBox runat="server" ID="ui_childCount" CssClass="form-control" placeholder="儿童人数"></asp:TextBox>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="ui_arriveTrain">抵达车次</label>
-                                        <input type="text" class="form-control" id="ui_arriveTrain" placeholder="抵达车次" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_earnestOther">其他</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-cny"></i></span>
+                                        <asp:TextBox runat="server" ID="ui_earnestOther" CssClass="form-control" placeholder="其他"></asp:TextBox>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="ui_groupType">团型</label>
-                                        <input type="text" class="form-control" id="ui_groupType" placeholder="团型" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_earnestOtherDes">其他说明</label>
+                                    <asp:TextBox runat="server" ID="ui_earnestOtherDes" CssClass="form-control" placeholder="其他说明"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_earnestTotal">总价</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-cny"></i></span>
+                                        <asp:TextBox runat="server" ID="ui_earnestTotal" CssClass="form-control" placeholder="总价"></asp:TextBox>
+                                        <span id="ui_earnestSubtotal" class="input-group-addon"><i class="fa fa-rotate-right"></i></span>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="ui_durationDay">住宿时间</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="ui_durationDay" placeholder="几" />
-                                            <span class="input-group-addon">天</span>
-                                            <input type="text" class="form-control" id="ui_durationNight" placeholder="几" />
-                                            <span class="input-group-addon">晚</span>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_hotelStandard">住宿标准</label>
-                                        <div class="input-group">
-                                            <label>
-                                                <input type="radio" name="standard" class="minimal" />
-                                            </label>
-                                            <label>准三</label>
-                                            <label>
-                                                <input type="radio" name="standard" class="minimal" />
-                                            </label>
-                                            <label>准四</label>
-                                            <label>
-                                                <input type="radio" name="standard" class="minimal" />
-                                            </label>
-                                            <label>准五</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_backDatePlan">计划返程日期</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </div>
-                                            <input type="text" class="form-control" id="ui_backDatePlan" data-inputmask="'alias': 'yyyy/mm/dd'" data-mask />
-                                        </div>
-                                        <label>
-                                            <input type="radio" name="seeOff" class="minimal" />
-                                        </label>
-                                        <label>送站</label>
-                                        <label>
-                                            <input type="radio" name="seeOff" class="minimal" />
-                                        </label>
-                                        <label>不送站</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_backTicket">返程票</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="ui_backTicket" placeholder="返程票" />
-                                            <span class="input-group-addon">车次
-                                            </span>
-                                        </div>
-                                        <label>
-                                            <input type="radio" name="backTicket" class="minimal" />
-                                        </label>
-                                        <label>我社自理</label>
-                                        <label>
-                                            <input type="radio" name="backTicket" class="minimal" />
-                                        </label>
-                                        <label>贵社出</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="ui_backTicketPrice">返票价格</label>
-                                        <input type="text" class="form-control" id="ui_backTicketPrice" placeholder="返票价格" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label>价格结算</label>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="ui_settlementPriceAdult">成人</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-cny"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" id="ui_settlementPriceAdult" placeholder="成人价格" />
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <label for="ui_settlementPriceChild">儿童</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-cny"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" id="ui_settlementPriceChild" placeholder="儿童价格" />
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_insteadReceive">代收金额</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-cny"></i></span>
+                                        <asp:TextBox runat="server" ID="ui_insteadReceive" CssClass="form-control" placeholder="代收金额"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="box-footer">
-                        <button id="ui_itemButton" type="button" class="btn btn-primary" data-bind="click: SubmitBtnClick">提交</button>
+                    <div class="col-md-6">
+                        <div class="box box-danger">
+                            <div class="box-header">
+                                <h6 class="box-title">登记信息</h6>
+                            </div>
+                            <div class="box-body" id="ui_customsBox" count="1">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><i class="fa fa-male"></i></div>
+                                        <input type="text" class="form-control" id="ui_customerName0" placeholder="客人姓名" />
+                                        <div class="input-group-addon"><i class="fa fa-credit-card"></i></div>
+                                        <input type="text" class="form-control" id="ui_customerIdCard0" placeholder="身份证" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary" id="ui_addRegistInfo">添加</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </aside>
-    </div>
-    <script src="../../js/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../../js/plugins/input-mask/jquery.inputmask.js" type="text/javascript"></script>
-    <script src="../../js/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
-    <script src="../../js/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
-    <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
-    <script src="../../js/knockout-3.3.0.js" type="text/javascript"></script>
-    <script src="../../js/jquery.signalR-2.2.0.min.js"></script>
-    <script src="/signalr/hubs"></script>
-    <script src="../../js/SignalR/SignalRTravelItem.js"></script>
-    <script src="../../js/Pages/Page.TravelItemForm.js" type="text/javascript"></script>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-default">
+                            <div class="box-header">
+                                <h4 class="box-title">组团社</h4>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="ui_agencyInput">组团社</label>
+                                    <div class="input-group">
+                                        <input type="text" id="ui_agencyInput" name="q" class="form-control" placeholder="搜索..." />
+                                        <span class="input-group-btn">
+                                            <button type='submit' name='seach' id='ui_agencySearchBtn' class="btn btn-flat" data-bind="click: searchAgencyClick"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="ui_agencySelectDiv" class="form-group" data-bind="visible: needShowAgency">
+                                    <select class="form-control select2" style="width: 100%;" data-bind="options: optionAgencys, optionsText: 'AgencyName', value: selectedAgency">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-bind="visible: needShowAgency">
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <i class="fa fa-text-width"></i>
+                                <h3 class="box-title">旅行社信息</h3>
+                            </div>
+                            <div class="box-body">
+                                <h4>名  称:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyName : ''"></span></h4>
+                                <h4>确认人:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyPrincipal : ''"></span></h4>
+                                <h4>负责人电话:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyPrincipalPhone : ''"></span></h4>
+                                <h4>传真:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyFax : ''"></span></h4>
+                                <h4>地址:<span data-bind="text: selectedAgency() ? selectedAgency().AgencyAddress : ''"></span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-default">
+                            <div class="box-header">
+                                <h3 class="box-title">去时</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="ui_onwardTicket1">去程票价1</label>
+                                    <asp:TextBox runat="server" ID="ui_onwardTicket1" CssClass="form-control" placeholder="去程票价1"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_onwardServiceCharge1">去程服务费1</label>
+                                    <asp:TextBox runat="server" ID="ui_onwardServiceCharge1" CssClass="form-control" placeholder="去程服务费1"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_onwardTicket2">去程票价2</label>
+                                    <asp:TextBox runat="server" ID="ui_onwardTicket2" CssClass="form-control" placeholder="去程票价2"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_onwardServiceCharge2">去程服务费2</label>
+                                    <asp:TextBox runat="server" ID="ui_onwardServiceCharge2" CssClass="form-control" placeholder="去程服务费2"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box box-default">
+                            <div class="box-header">
+                                <h3 class="box-title">回程</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="ui_backwardTicket1">回程票价1</label>
+                                    <asp:TextBox runat="server" ID="ui_backwardTicket1" CssClass="form-control" placeholder="回程票价1"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_backwardServiceCharge1">回程服务费1</label>
+                                    <asp:TextBox runat="server" ID="ui_backwardServiceCharge1" CssClass="form-control" placeholder="回程服务费1"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_backwardTicket2">回程票价2</label>
+                                    <asp:TextBox runat="server" ID="ui_backwardTicket2" CssClass="form-control" placeholder="回程票价2"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_backwardServiceCharge2">回程服务费2</label>
+                                    <asp:TextBox runat="server" ID="ui_backwardServiceCharge2" CssClass="form-control" placeholder="回程服务费2"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-default">
+                            <div class="box-header">
+                                <h3 class="box-title">费用</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="ui_seeOffFee">送机费</label>
+                                    <asp:TextBox runat="server" ID="ui_seeOffFee" CssClass="form-control" placeholder="送机费"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_insuranceFee">保险费</label>
+                                    <asp:TextBox runat="server" ID="ui_insuranceFee" CssClass="form-control" placeholder="保险费"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_atTimeRefund">现退款</label>
+                                    <asp:TextBox runat="server" ID="ui_atTimeRefund" CssClass="form-control" placeholder="现退款"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_atTimeAccept">现收款</label>
+                                    <asp:TextBox runat="server" ID="ui_atTimeAccept" CssClass="form-control" placeholder="现收款"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_otherPrice">其他费</label>
+                                    <asp:TextBox runat="server" ID="ui_otherPrice" CssClass="form-control" placeholder="其他费"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_otherDescription">其他说明</label>
+                                    <asp:TextBox runat="server" ID="ui_otherDescription" CssClass="form-control" placeholder="其他说明"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-default">
+                            <div class="box-header">
+                                <h4 class="box-title">地接社</h4>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="ui_operatorInput">地接社</label>
+                                    <div class="input-group">
+                                        <input type="text" id="ui_operatorInput" name="q" class="form-control" placeholder="搜索..." />
+                                        <span class="input-group-btn">
+                                            <button type='submit' name='seach' id='ui_operatorBtn' class="btn btn-flat" data-bind="click: searchOperatorClick"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div id="ui_operatorSelectDiv" class="form-group" data-bind="visible: needShowOperator">
+                                    <select class="form-control select2" style="width: 100%;" data-bind="options: optionOperators, optionsText: 'AgencyName', value: selectedOperator">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-bind="visible: needShowOperator">
+                        <div class="box box-default">
+                            <div class="box-header with-border">
+                                <i class="fa fa-text-width"></i>
+                                <h3 class="box-title">旅行社信息</h3>
+                            </div>
+                            <div class="box-body">
+                                <h4>名  称:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyName : ''"></span></h4>
+                                <h4>确认人:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyPrincipal : ''"></span></h4>
+                                <h4>负责人电话:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyPrincipalPhone : ''"></span></h4>
+                                <h4>传真:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyFax : ''"></span></h4>
+                                <h4>地址:<span data-bind="text: selectedOperator() ? selectedOperator().AgencyAddress : ''"></span></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box box-danger">
+                            <div class="box-header">
+                                <h3 class="box-title">信息</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="ui_arriveDate">抵达日期</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <asp:TextBox runat="server" ID="ui_arriveDate" CssClass="form-control" placeholder="yyyy/mm/dd" TextMode="Date"></asp:TextBox>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_arriveTrain">抵达车次</label>
+                                    <asp:TextBox runat="server" ID="ui_arriveTrain" CssClass="form-control" placeholder="抵达车次"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_groupType">团型</label>
+                                    <asp:TextBox runat="server" ID="ui_groupType" CssClass=" form-control" placeholder="团型"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_durationDay">住宿时间</label>
+                                    <div class="input-group">
+                                        <asp:TextBox runat="server" ID="ui_durationDay" CssClass="form-control" placeholder="几"></asp:TextBox>
+                                        <span class="input-group-addon">天</span>
+                                        <asp:TextBox runat="server" ID="ui_durationNight" CssClass="form-control" placeholder="几"></asp:TextBox>
+                                        <span class="input-group-addon">晚</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_hotelStandard">住宿标准</label>
+                                    <div class="input-group">
+                                        <label>
+                                            <input type="radio" name="standard" class="minimal" />
+                                        </label>
+                                        <label>准三</label>
+                                        <label>
+                                            <input type="radio" name="standard" class="minimal" />
+                                        </label>
+                                        <label>准四</label>
+                                        <label>
+                                            <input type="radio" name="standard" class="minimal" />
+                                        </label>
+                                        <label>准五</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_backDatePlan">计划返程日期</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        <asp:TextBox runat="server" ID="ui_backDatePlan" CssClass="form-control" placeholder="yyyy/mm/dd" TextMode="Date"></asp:TextBox>
+                                    </div>
+                                    <label>
+                                        <input type="radio" name="seeOff" class="minimal" />
+                                    </label>
+                                    <label>送站</label>
+                                    <label>
+                                        <input type="radio" name="seeOff" class="minimal" />
+                                    </label>
+                                    <label>不送站</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_backTicket">返程票</label>
+                                    <div class="input-group">
+                                        <asp:TextBox runat="server" ID="ui_backTicket" CssClass="form-control" placeholder="返程票"></asp:TextBox>
+                                        <span class="input-group-addon">车次
+                                        </span>
+                                    </div>
+                                    <label>
+                                        <asp:RadioButton runat="server" CssClass="minimal" GroupName="backTicket" />
+                                    </label>
+                                    <label>我社自理</label>
+                                    <label>
+                                        <asp:RadioButton runat="server" CssClass="minimal" GroupName="backTicket" />
+                                    </label>
+                                    <label>贵社出</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ui_backTicketPrice">返票价格</label>
+                                    <asp:TextBox runat="server" ID="ui_backTicketPrice" CssClass="form-control" placeholder="返票价格"></asp:TextBox>
+                                </div>
+                                <div class="form-group">
+                                    <label>价格结算</label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label for="ui_settlementPriceAdult">成人</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-cny"></i>
+                                                </div>
+                                                <asp:TextBox runat="server" ID="ui_settlementPriceAdult" CssClass="form-control" placeholder="成人价格"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="ui_settlementPriceChild">儿童</label>
+                                            <div class="input-group">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-cny"></i>
+                                                </div>
+                                                <asp:TextBox runat="server" ID="ui_settlementPriceChild" CssClass="form-control" placeholder="儿童价格"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <asp:Button runat="server" ID="ui_itemButton" CssClass="btn btn-primary" OnClick="ui_itemButton_Click" Text="提交" />
+                </div>
+            </div>
+        </section>
+    </aside>
+    <script src="/js/jQuery-2.1.4.min.js"></script>
+    <script src="/js/knockout-3.3.0.js" type="text/javascript"></script>
 </asp:Content>

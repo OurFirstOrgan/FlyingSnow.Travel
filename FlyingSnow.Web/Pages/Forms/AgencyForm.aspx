@@ -93,17 +93,4 @@
             </div>
         </section>
     </aside>
-    <%--    <script src="../../js/jQuery-2.1.4.min.js"></script>
-    <script src="../../js/jquery.signalR-2.2.0.min.js"></script>
-    <script src="/signalr/hubs"></script>
-    <script src="../../js/SignalR/SignalRAgency.js"></script>
-    <script src="../../js/Pages/Page.AgencyForm.js"></script>--%>
-    <%--    <script src="../../js/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../../js/AdminLTE/app.js" type="text/javascript"></script>
-    <script src="../../js/jquery.signalR-2.2.0.min.js"></script>
-    <script src="/signalr/hubs"></script>
-    <script src="../../js/SignalR/SignalRAgency.js"></script>
-    <script src="../../js/common.js"></script>
-    <script src="../../js/Pages/Page.AgencyForm.js"></script>--%>
 </asp:Content>

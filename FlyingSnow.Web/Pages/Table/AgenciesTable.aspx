@@ -80,10 +80,7 @@
         </section>
     </aside>
     <script src="/js/jQuery-2.1.4.min.js" type="text/javascript"></script>
-    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/js/plugins/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-    <script src="/js/app.min.js"></script>
-    <script src="/js/knockout-3.3.0.js" type="text/javascript"></script>
+    <script src="/js/knockout-3.4.0.js"></script>
     <script src="/js/knockout.simpleGrid.3.0.js" type="text/javascript"></script>
     <script src="/js/Pages/Page.AgenciesTable.js"></script>
 </asp:Content>
