@@ -1,14 +1,14 @@
 ﻿var PageInfo = {
+    Flag,
     selectedAgency: {},
     agencys: [],
     selectedOperator: {},
     operators: []
 };
 $(function () {
-    //SRJoinGroup("123");
-    $("#datemask").inputmask("yyyy/mm/dd", { "placeholder": "yyyy/mm/dd" });
+    //$("#datemask").inputmask("yyyy/mm/dd", { "placeholder": "yyyy/mm/dd" });
 
-    $("[data-mask]").inputmask();
+    //$("[data-mask]").inputmask();
 
     $("#ui_addRegistInfo").bind("click", function () {
         InsertCusInfoInputDiv();
@@ -18,18 +18,17 @@ $(function () {
         EarnestSubtotal();
     });
 
-    //ko.applyBindings(TravelItemViewModel);
+    ko.applyBindings(TravelItemViewModel);
 });
 
-var TravelItemViewModel = {}
-//var TravelItemViewModel = {
-//    needShowAgency: ko.observable(false),
-//    selectedAgency: ko.observable(PageInfo.selectedAgency),
-//    optionAgencys: ko.observable(PageInfo.agencys),
-//    needShowOperator: ko.observable(false),
-//    selectedOperator: ko.observable(PageInfo.selectedOperator),
-//    optionOperators: ko.observable(PageInfo.operators)
-//}
+var TravelItemViewModel = {
+    needShowAgency: ko.observable(false),
+    selectedAgency: ko.observable(PageInfo.selectedAgency),
+    optionAgencys: ko.observable(PageInfo.agencys),
+    needShowOperator: ko.observable(false),
+    selectedOperator: ko.observable(PageInfo.selectedOperator),
+    optionOperators: ko.observable(PageInfo.operators)
+}
 
 TravelItemViewModel.searchAgencyClick = function () {
     var inputInfo = $("#ui_agencyInput").val();
@@ -85,6 +84,43 @@ function EarnestSubtotal() {
     $("#ui_earnestTotal").val(total);
 }
 
+
+
+function SearchAgency(param) {
+    var reg = /^([a-z]+(?=[0-9])|[0-9]+(?=[a-z]))[a-z0-9]+$/ig;
+    if (reg.test(param)) {
+        CallAgenciesAjax("7785411B-DF71-4AFE-98C9-FB9EB2953D89" + "code1" + param);
+    }
+    else {
+        CallAgenciesAjax("7785411B-DF71-4AFE-98C9-FB9EB2953D89" + "name1" + param);
+    }
+}
+
+function SearchOperator(param) {
+    var reg = /^([a-z]+(?=[0-9])|[0-9]+(?=[a-z]))[a-z0-9]+$/ig;
+    if (reg.test(param)) {
+        CallAgenciesAjax("7785411B-DF71-4AFE-98C9-FB9EB2953D89" + "code2" + param);
+    }
+    else {
+        CallAgenciesAjax("7785411B-DF71-4AFE-98C9-FB9EB2953D89" + "name2" + param);
+    }
+}
+
+function LoadAgenciesAjaxSuccess(result) {
+    tableDatas = [];
+    var _obj = JSON.parse(result);
+    if (_obj.Flag == "code1") {
+        PageInfo.agencys = _obj.Agencies;
+        RefreshAgencyView();
+    } else {
+        PageInfo.operators = _obj.Agencies;
+    }
+}
+
+function LoadAgenciesAjaxError(result) {
+    alert(result);
+}
+
 function AssemblyTravelItem() {
     var item = {};
     item.CustomerName = $("#ui_customerName").val();
@@ -134,24 +170,4 @@ function AssemblyTravelItem() {
     //item.SeeOff
     item.BackTicket = $("#ui_backTicket").val();
     return item;
-}
-
-function SearchAgency(param) {
-    var reg = /^([a-z]+(?=[0-9])|[0-9]+(?=[a-z]))[a-z0-9]+$/ig;
-    if (reg.test(param)) {
-        SR_SearchAgency(param, 'code');
-    }
-    else {
-        SR_SearchAgency(param, 'name');
-    }
-}
-
-function SearchOperator(param) {
-    var reg = /^([a-z]+(?=[0-9])|[0-9]+(?=[a-z]))[a-z0-9]+$/ig;
-    if (reg.test(param)) {
-        SR_SearchOperator(param, 'code');
-    }
-    else {
-        SR_SearchOperator(param, 'name');
-    }
 }

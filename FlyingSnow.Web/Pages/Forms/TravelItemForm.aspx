@@ -429,5 +429,6 @@
         </section>
     </aside>
     <script src="/js/jQuery-2.1.4.min.js"></script>
-    <script src="/js/knockout-3.3.0.js" type="text/javascript"></script>
+    <script src="/js/knockout-3.4.0.js"></script>
+    <script src="/js/Pages/Page.TravelItemForm.js"></script>
 </asp:Content>

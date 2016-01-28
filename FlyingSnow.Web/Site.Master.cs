@@ -1,5 +1,6 @@
 ﻿using FlyingSnow.Controls;
 using FlyingSnow.Entries;
+using FlyingSnow.Log;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -117,10 +118,10 @@ namespace FlyingSnow.Web
         public void LoadAgenciesTablePageAjax()
         {
             ClientScriptManager csm = Page.ClientScript;
-            string reference = csm.GetCallbackEventReference(this, "args", "LoadAgenciesTablePageAjaxSuccess", "", "LoadAgenciesTablePageAjaxError", false);
-            string callbackScript = "function CallAgenciesTablePageAjax(args, context) {\n" +
+            string reference = csm.GetCallbackEventReference(this, "args", "LoadAgenciesAjaxSuccess", "", "LoadAgenciesAjaxError", false);
+            string callbackScript = "function CallAgenciesAjax(args, context) {\n" +
                reference + ";\n }";
-            csm.RegisterClientScriptBlock(this.GetType(), "CallAgenciesTablePageAjax", callbackScript, true);
+            csm.RegisterClientScriptBlock(this.GetType(), "CallAgenciesAjax", callbackScript, true);
         }
 
         public void LoadTravelItemsTablePageAjax()
@@ -135,14 +136,27 @@ namespace FlyingSnow.Web
 
         private void GetAgenciesByFilter(string paraStr)
         {
-            AgencyControl _agencyControl = new AgencyControl();
-            if (string.IsNullOrEmpty(paraStr))
+            List<TravelAgency> _agencies = null;
+            string flag = null;
+            string para = null;
+            try
             {
-                List<TravelAgency> _agencies = _agencyControl.GetAllAgencies();
-                a_result = JsonConvert.SerializeObject(new { Agencies = _agencies });
+                AgencyControl _agencyControl = new AgencyControl();
+                if (string.IsNullOrEmpty(paraStr))
+                {
+                    _agencies = _agencyControl.GetAllAgencies();
+                }
+                else
+                {
+                    flag = paraStr.Substring(0, 5);
+                    para = paraStr.Substring(5);
+                    _agencies = _agencyControl.GetAgenciesByFilter(flag, para);
+                }
+                a_result = JsonConvert.SerializeObject(new { Agencies = _agencies, Flag = flag });
             }
-            else
+            catch (Exception ex)
             {
+                Logs.Error("GetAgenciesByFilter Exception:" + ex.ToString());
             }
         }
 

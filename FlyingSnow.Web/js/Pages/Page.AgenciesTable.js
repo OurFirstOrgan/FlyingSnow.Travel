@@ -1,6 +1,6 @@
 ﻿var tableDatas = [];
 $(function () {
-    CallAgenciesTablePageAjax("7785411B-DF71-4AFE-98C9-FB9EB2953D89");
+    CallAgenciesAjax("7785411B-DF71-4AFE-98C9-FB9EB2953D89");
     ko.applyBindings(AgenciesTableModel);
 });
 
@@ -35,12 +35,12 @@ function GetAgenciesByFilter(input) {
     }
 }
 
-function LoadAgenciesTablePageAjaxSuccess(result) {
+function LoadAgenciesAjaxSuccess(result) {
     tableDatas = [];
     var _agencies = JSON.parse(result).Agencies;
     AgenciesTableModel.agencies(_agencies);
 }
 
-function LoadAgenciesTablePageAjaxError(result) {
+function LoadAgenciesAjaxError(result) {
     alert(result);
 }
