@@ -130,6 +130,15 @@ namespace FlyingSnow.Web.Pages.Forms {
         protected global::System.Web.UI.WebControls.TextBox ui_insteadReceive;
         
         /// <summary>
+        /// ui_agencyLable control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ui_agencyLable;
+        
+        /// <summary>
         /// ui_onwardTicket1 control.
         /// </summary>
         /// <remarks>

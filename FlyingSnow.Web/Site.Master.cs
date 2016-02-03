@@ -137,8 +137,9 @@ namespace FlyingSnow.Web
         private void GetAgenciesByFilter(string paraStr)
         {
             List<TravelAgency> _agencies = null;
-            string flag = null;
-            string para = null;
+            string _searchFlag = null;
+            string _paraFlag = null;
+            string _para = null;
             try
             {
                 AgencyControl _agencyControl = new AgencyControl();
@@ -148,11 +149,12 @@ namespace FlyingSnow.Web
                 }
                 else
                 {
-                    flag = paraStr.Substring(0, 5);
-                    para = paraStr.Substring(5);
-                    _agencies = _agencyControl.GetAgenciesByFilter(flag, para);
+                    _searchFlag = paraStr.Substring(0, 4);
+                    _paraFlag = paraStr.Substring(0, 5);
+                    _para = paraStr.Substring(5);
+                    _agencies = _agencyControl.GetAgenciesByFilter(_searchFlag, _para);
                 }
-                a_result = JsonConvert.SerializeObject(new { Agencies = _agencies, Flag = flag });
+                a_result = JsonConvert.SerializeObject(new { Agencies = _agencies, Flag = _paraFlag });
             }
             catch (Exception ex)
             {

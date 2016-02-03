@@ -23,5 +23,20 @@ namespace FlyingSnow.Configuration
                 }
             }
         }
+
+        public static bool IsDev
+        {
+            get
+            {
+                try
+                {
+                    return Convert.ToBoolean(ConfigurationManager.AppSettings["IsDev"]);
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+        }
     }
 }
