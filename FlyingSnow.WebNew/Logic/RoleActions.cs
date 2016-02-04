@@ -30,7 +30,10 @@ namespace FlyingSnow.WebNew.Logic
 
             var appUser = new ApplicationUser
             {
-                UserName = "administrator"
+                UserName = "administrator",
+                ImgUrl = "user2-160x160.jpg",
+                Description = "High Level",
+                SinceDate = new DateTime(2016, 1, 1)
             };
 
             IdUserResult = userMgr.Create(appUser, "1qaz2wsxE");
@@ -95,6 +98,25 @@ namespace FlyingSnow.WebNew.Logic
                 }
             }
             if (result == IdentityResult.Success) return true; else return false;
+        }
+
+        internal ViewUser GetUserById(string userId)
+        {
+            ApplicationDbContext context = new ApplicationDbContext();
+            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            ApplicationUser account = userMgr.FindById(HttpContext.Current.User.Identity.GetUserId());
+            List<string> roles = userMgr.GetRoles(userId).ToList();
+
+            ViewUser viewUser = new ViewUser();
+            viewUser.Id = userId;
+            viewUser.UserName = account.UserName;
+            viewUser.RealUserName = string.IsNullOrEmpty(account.RealUserName) ? account.UserName : account.RealUserName;
+            viewUser.MainRole = roles[0];
+            viewUser.ImgUrl = account.ImgUrl;
+            viewUser.SinceDate = account.SinceDate;
+            viewUser.Description = account.Description;
+
+            return viewUser;
         }
     }
 }

@@ -8,6 +8,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using FlyingSnow.Configuration;
+using Microsoft.AspNet.Identity.Owin;
+using FlyingSnow.WebNew.Logic;
+using Newtonsoft.Json;
 
 namespace FlyingSnow.WebNew
 {
@@ -16,6 +19,8 @@ namespace FlyingSnow.WebNew
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
+
+        public string UserInfo;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -45,9 +50,17 @@ namespace FlyingSnow.WebNew
                 }
                 Response.Cookies.Set(responseCookie);
             }
-            if (!(ConfigurationInfo.IsDev || HttpContext.Current.User.Identity.IsAuthenticated))
+
+            if (!HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                Response.Redirect("~/Account/Login");
+                if (ConfigurationInfo.IsDev)
+                {
+                    var signinManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
+                    signinManager.PasswordSignIn("administrator", "1qaz2wsxE", true, false);
+                }
+                else {
+                    Response.Redirect("~/Account/Login");
+                }
             }
 
             Page.PreLoad += master_Page_PreLoad;
@@ -74,9 +87,9 @@ namespace FlyingSnow.WebNew
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            var user = HttpContext.Current.User;
-
-
+            RoleActions roleAciton = new RoleActions();
+            Models.ViewUser viewUser = roleAciton.GetUserById(HttpContext.Current.User.Identity.GetUserId());
+            UserInfo = JsonConvert.SerializeObject(viewUser);
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
